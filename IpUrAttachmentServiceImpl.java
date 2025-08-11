@@ -21,11 +21,11 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	private IPUrAttachmentDao ipUrAttachmentDao;
 	private CommonDao commonDao;
 
-	public void setIpUrAttachmentDao(IPUrAttachmentDao ipUrAttachmentDao) {
+	public void setIpUrAttachmentDao(IPUrAttachmentDao ipUrAttachmentDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrAttachmentDao
 		this.ipUrAttachmentDao = ipUrAttachmentDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
@@ -58,7 +58,7 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	}
 
 	@Override
-	public void updateAttachFileName(String tempUrNo,String urNo) throws IPFMBusinessException {
+	public void updateAttachFileName(String tempUrNo,String urNo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateAttachFileName
 		try{
 			List<IpUrAttachment> listAttach = ipUrAttachmentDao.findByUrNo(tempUrNo);
 			boolean failed = false;
@@ -91,7 +91,7 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	}
 	
 	@Override
-	public void updateAttachFileNameByCategory(String tempUrNo,String urNo) throws IPFMBusinessException {
+	public void updateAttachFileNameByCategory(String tempUrNo,String urNo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateAttachFileNameByCategory
 		try{
 			List<IpUrAttachment> listAttach = ipUrAttachmentDao.findByUrNo(tempUrNo);
 			boolean failed = false;
@@ -114,7 +114,7 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 
 
 	@Override
-	public void attachFile(IpUrAttachment ipUrAttachment) throws IPFMBusinessException {
+	public void attachFile(IpUrAttachment ipUrAttachment) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference attachFile
 		IpUrAttachment attach = findAttachment(ipUrAttachment.getId().getUrNo(), ipUrAttachment.getFileName(), ipUrAttachment.getId().getCategory());
 	    if(attach!=null){
 	    	String deleteStr = attach.getFileLocation()+"/"+attach.getFileName();
@@ -134,7 +134,7 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	}
 	
 	@Override
-	public void updateAttachFile(String tempUrNo,String urNo,String updateBy) {
+	public void updateAttachFile(String tempUrNo,String urNo,String updateBy) { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateAttachFile
 		List<IpUrAttachment> listAttach = ipUrAttachmentDao.findByUrNo(tempUrNo);
 		boolean failed = false;
 		for(IpUrAttachment attach : listAttach){
@@ -168,7 +168,7 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	}
 	
 	@Override
-	public void updateAttachFileByCategory(String tempUrNo,String urNo,String updateBy) throws IPFMBusinessException{
+	public void updateAttachFileByCategory(String tempUrNo,String urNo,String updateBy) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference updateAttachFileByCategory
 		List<IpUrAttachment> listAttach = ipUrAttachmentDao.findByUrNo(tempUrNo);
 		boolean failed = false;
 		for(IpUrAttachment attach : listAttach){
@@ -202,17 +202,17 @@ public class IpUrAttachmentServiceImpl implements IpUrAttachmentService {
 	}
 
 	@Override
-	public List<IpUrAttachment> listFilesByUrNo(String urNo) {
+	public List<IpUrAttachment> listFilesByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listFilesByUrNo
 		return ipUrAttachmentDao.findByUrNo(urNo);		
 	}
 
 	@Override
-	public IpUrAttachment findAttatchment(String urNo, String seq) {
+	public IpUrAttachment findAttatchment(String urNo, String seq) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findAttatchment
 		return ipUrAttachmentDao.findByUrNoSeq(urNo, new BigDecimal(seq));
 	}
 
 	@Override
-	public List<IpUrAttachment> listFilesByCategory(String urNo, String category) {
+	public List<IpUrAttachment> listFilesByCategory(String urNo, String category) { // DMAP Comment : Dead Code Detected - The Following Method has no reference listFilesByCategory
 		return ipUrAttachmentDao.findByCategory(urNo,category);		
 	}
 	

@@ -32,23 +32,23 @@ public class FirewallServiceImpl implements FirewallService{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 
-	public void setFirewallDao(IIPFirewallDAO firewallDao) {
+	public void setFirewallDao(IIPFirewallDAO firewallDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setFirewallDao
 		this.firewallDao = firewallDao;
 	}
 
@@ -73,22 +73,22 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
-	public IpInfo getIPInfoWithUsedStatus(String ip) {
+	public IpInfo getIPInfoWithUsedStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoWithUsedStatus
 		String status[] = {"U"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
 	}	
 
 	@Override
-	public List<IpMasterTable> getService() {
+	public List<IpMasterTable> getService() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getService
 		return firewallDao.getServiceName();
 	}
 
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return firewallDao.genSubUrno(urNo);
 	}
 
@@ -103,12 +103,12 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 
 	@Override
-	public void updateFirewall(IpUrFirewall firewall) {
+	public void updateFirewall(IpUrFirewall firewall) { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateFirewall
 		firewallDao.update(firewall);		
 	}
 
 	@Override
-	public IpUrFirewall changeUrNo(IpUrFirewall tempUr, String urNO) {
+	public IpUrFirewall changeUrNo(IpUrFirewall tempUr, String urNO) { // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 		IpUrFirewall newFirewall = tempUr;
 		newFirewall.getId().setUrNo(urNO);
 		newFirewall.setRowId(commonDao.getROW_ID());
@@ -131,12 +131,12 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 
 	@Override
-	public IpMasterTable getServiceByRefID(String refNo) {
+	public IpMasterTable getServiceByRefID(String refNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getServiceByRefID
 		return firewallDao.getServiceNameByRefId(refNo);
 	}
 
 	@Override
-	public IpUrFirewall findFirewall(String urNo, String subUrNo) {
+	public IpUrFirewall findFirewall(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findFirewall
 		IpUrFirewallId id = new IpUrFirewallId(urNo, subUrNo);
 		IpUrFirewall data = firewallDao.findByKey(id);
 		if(data != null){
@@ -174,13 +174,13 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		firewallDao.commitSubURDelete(urNo,"A");
 		firewallDao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		firewallDao.commitSubURUpdate(urNo,"A");
 		List<IpUrFirewall> fwList = firewallDao.waitDeleteUr(urNo);
 		for(IpUrFirewall fw : fwList){
@@ -194,7 +194,7 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 	
 	@Override
-	public void updateFirewallSubUrStatus(IpUrFirewall ipUrFirewall)  throws IPFMBusinessException {
+	public void updateFirewallSubUrStatus(IpUrFirewall ipUrFirewall)  throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateFirewallSubUrStatus
 		try{
 			 firewallDao.update(ipUrFirewall);
 		} catch (DataAccessException e) {
@@ -207,17 +207,17 @@ public class FirewallServiceImpl implements FirewallService{
 	}
 	
 	@Override
-	public int  fineIpinfo(String ipStart,String ipEnd) {
+	public int  fineIpinfo(String ipStart,String ipEnd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference fineIpinfo
 		return ipInfoDao.findIpinfoWithUsedStatus(ipStart, ipEnd);
 	}
 
 	@Override
-	public int  findTier2TeamID(String ipStart,String ipEnd) {
+	public int  findTier2TeamID(String ipStart,String ipEnd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findTier2TeamID
 		return ipInfoDao.findTier2TeamIDWithUsedStatus(ipStart, ipEnd);
 	}
 	
 	@Override
-	public int  findSystemOwnerTeamID(String ipStart,String ipEnd) {
+	public int  findSystemOwnerTeamID(String ipStart,String ipEnd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findSystemOwnerTeamID
 		return ipInfoDao.findSystemOwnerTeamIDWithUsedStatus(ipStart, ipEnd);
 	}
 	

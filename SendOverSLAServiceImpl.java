@@ -36,7 +36,7 @@ public class SendOverSLAServiceImpl implements SendOverSLAService{
 	}
 
 	@Override
-	public List<String> listUROverSLA(String refKey, String urType) {		
+	public List<String> listUROverSLA(String refKey, String urType) {		 // DMAP Comment : Dead Code Detected - The Following Method has no reference listUROverSLA
 		List<String> listUR = new ArrayList<String>();
 		try {
 			if(refKey!=null && refKey.equals("NC")){
@@ -52,7 +52,7 @@ public class SendOverSLAServiceImpl implements SendOverSLAService{
 	}
 
 	@Override
-	public void updateSendSMS(String urType, String urNo) {
+	public void updateSendSMS(String urType, String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateSendSMS
 		
 		try {
 			if(urType!=null && urType.equals("NC")){
@@ -66,11 +66,11 @@ public class SendOverSLAServiceImpl implements SendOverSLAService{
 
 	}
 
-	public IAutoSendSMSDao getiAutoSendSMSDao() {
+	public IAutoSendSMSDao getiAutoSendSMSDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getiAutoSendSMSDao
 		return iAutoSendSMSDao;
 	}
 
-	public void setiAutoSendSMSDao(IAutoSendSMSDao iAutoSendSMSDao) {
+	public void setiAutoSendSMSDao(IAutoSendSMSDao iAutoSendSMSDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setiAutoSendSMSDao
 		this.iAutoSendSMSDao = iAutoSendSMSDao;
 	}
 

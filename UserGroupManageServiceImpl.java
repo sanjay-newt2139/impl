@@ -19,7 +19,7 @@ public class UserGroupManageServiceImpl implements UserGroupManageService{
 
 	
 
-	public void setIpGroupMemberDao(IIPGroupMemberDao ipGroupMemberDao) {
+	public void setIpGroupMemberDao(IIPGroupMemberDao ipGroupMemberDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpGroupMemberDao
 		this.ipGroupMemberDao = ipGroupMemberDao;
 	}
 
@@ -57,7 +57,7 @@ public class UserGroupManageServiceImpl implements UserGroupManageService{
 
 
 	@Override
-	public List<IPGroupMemberUser> deleteAndReSearchUserGroupManage(String rowId,String grpId) throws IPFMBusinessException {
+	public List<IPGroupMemberUser> deleteAndReSearchUserGroupManage(String rowId,String grpId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndReSearchUserGroupManage
 		List<IPGroupMemberUser> ipGroupMemberList = null;
 		IPGroupMemberUser groupMember = ipGroupMemberDao.getByPrimaryKey(rowId);
 		if(groupMember!=null){
@@ -81,7 +81,7 @@ public class UserGroupManageServiceImpl implements UserGroupManageService{
 	}
 
 	@Override
-	public IPGroupMembers createUserGroupManage(IPGroupMembers ipGroupMember)throws IPFMBusinessException {
+	public IPGroupMembers createUserGroupManage(IPGroupMembers ipGroupMember)throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createUserGroupManage
 		try {
 			if(ipGroupMember!=null){
 

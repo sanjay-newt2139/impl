@@ -17,7 +17,7 @@ public  class ManageDataIPServiceImpl implements ManageDataIPService{
 	private IPDetailDao ipDetailDao;
 	
 
-	public void setIpDetailDao(IPDetailDao ipDetailDao) {
+	public void setIpDetailDao(IPDetailDao ipDetailDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpDetailDao
 		this.ipDetailDao = ipDetailDao;
 	}
 
@@ -51,7 +51,7 @@ public  class ManageDataIPServiceImpl implements ManageDataIPService{
 	}
 
 	@Override
-	public IPDetail updateIpDetail(IPDetail ipDetail)
+	public IPDetail updateIpDetail(IPDetail ipDetail) // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpDetail
 			throws IPFMBusinessException {
 		try {
 			if(ipDetail!=null){
@@ -65,7 +65,7 @@ public  class ManageDataIPServiceImpl implements ManageDataIPService{
 	
 
 	@Override
-	public IPDetail getIPDetail(String rowId)
+	public IPDetail getIPDetail(String rowId) // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPDetail
 			throws IPFMBusinessException {
 		IPDetail ipDetail = null;
 		try {

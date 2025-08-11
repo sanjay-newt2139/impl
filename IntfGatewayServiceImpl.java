@@ -33,44 +33,44 @@ public class IntfGatewayServiceImpl implements IntfGatewayService{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 	
 	
 
-	public void setIntfGatewayDao(IIPIntfGatewayDao intfGatewayDao) {
+	public void setIntfGatewayDao(IIPIntfGatewayDao intfGatewayDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIntfGatewayDao
 		this.intfGatewayDao = intfGatewayDao;
 	}
 
 
 
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return intfGatewayDao.getSubUrNo(urNo);
 	}
 	
 	
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
 	
 	@Override
-	public IpInfo getIPInfoWithUsedStatus(String ip) {
+	public IpInfo getIPInfoWithUsedStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoWithUsedStatus
 		String[] status = {"U"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
 	}
@@ -83,7 +83,7 @@ public class IntfGatewayServiceImpl implements IntfGatewayService{
 	
 	
 	@Override
-	public List<IpUrInterfaceGateway> findByUrNo(String urNo) {
+	public List<IpUrInterfaceGateway> findByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		return intfGatewayDao.findByURNo(urNo);
 	}
 
@@ -95,7 +95,7 @@ public class IntfGatewayServiceImpl implements IntfGatewayService{
 
 
 	@Override
-	public IpUrInterfaceGateway changeUrNo(IpUrInterfaceGateway tempUr,
+	public IpUrInterfaceGateway changeUrNo(IpUrInterfaceGateway tempUr, // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 			String urNO) {
 		IpUrInterfaceGateway newGateway = tempUr;
 		newGateway.getId().setUrNo(urNO);
@@ -126,7 +126,7 @@ public class IntfGatewayServiceImpl implements IntfGatewayService{
 	}
 	
 	@Override
-	public IpUrInterfaceGateway findFirewall(String urNo, String subUrNo) {
+	public IpUrInterfaceGateway findFirewall(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findFirewall
 		IpUrInterfaceGatewayId id = new IpUrInterfaceGatewayId(urNo, subUrNo);
 		return intfGatewayDao.getID(id);
 	}
@@ -160,13 +160,13 @@ public class IntfGatewayServiceImpl implements IntfGatewayService{
 	}
 	
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		intfGatewayDao.commitSubURDelete(urNo,"A");
 		intfGatewayDao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		intfGatewayDao.commitSubURUpdate(urNo,"A");
 		List<IpUrInterfaceGateway> igList = intfGatewayDao.waitDeleteUr(urNo);
 		for(IpUrInterfaceGateway ig : igList){

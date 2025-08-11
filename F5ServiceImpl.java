@@ -33,40 +33,40 @@ public class F5ServiceImpl implements F5Service{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 
 
-	public void setF5Dao(IIPF5Dao f5Dao) {
+	public void setF5Dao(IIPF5Dao f5Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setF5Dao
 		this.f5Dao = f5Dao;
 	}
 
 
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return f5Dao.getSubUrNo(urNo);
 	}
 	
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
 	@Override
-	public IpInfo getIPInfoWithStatus(String ip) {
+	public IpInfo getIPInfoWithStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoWithStatus
 		String[] status = {"A","U","R"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
 	}	
@@ -76,7 +76,7 @@ public class F5ServiceImpl implements F5Service{
 		f5Dao.saveOrUpdate(f5);
 	}
 	@Override
-	public List<IpUrF5> findByUrNo(String urNo) {
+	public List<IpUrF5> findByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		return f5Dao.findByURNo(urNo);
 	}
 
@@ -93,14 +93,14 @@ public class F5ServiceImpl implements F5Service{
 
 
 	@Override
-	public IpUrF5 getF5ById(IpUrF5Id id) {
+	public IpUrF5 getF5ById(IpUrF5Id id) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getF5ById
 		// TODO Auto-generated method stub
 		return f5Dao.getID(id);
 	}
 
 
 	@Override
-	public IpUrF5 changeUrNo(IpUrF5 tempUr, String urNO) {
+	public IpUrF5 changeUrNo(IpUrF5 tempUr, String urNO) { // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 		IpUrF5 newF5 = tempUr;
 		newF5.getId().setUrNo(urNO);
 		newF5.setRowId(commonDao.getROW_ID());
@@ -130,7 +130,7 @@ public class F5ServiceImpl implements F5Service{
 	}
 
 	@Override
-	public IpUrF5 findFirewall(String urNo, String subUrNo) {
+	public IpUrF5 findFirewall(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findFirewall
 		IpUrF5Id id = new IpUrF5Id(urNo, subUrNo);
 		return f5Dao.getID(id);
 	}
@@ -148,13 +148,13 @@ public class F5ServiceImpl implements F5Service{
 	}
 	
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		f5Dao.commitSubURDelete(urNo,"A");
 		f5Dao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		f5Dao.commitSubURUpdate(urNo,"A");
 		List<IpUrF5> f5List = f5Dao.waitDeleteUr(urNo);
 		for(IpUrF5 f5 : f5List){

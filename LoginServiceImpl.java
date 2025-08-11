@@ -60,54 +60,54 @@ public class LoginServiceImpl implements ILoginService{
 	private IPUrActionDao ipUrActionDao;
 	private IPFunctionDao ipFunctionDao;
 	
-	public void setAuthService(AuthenDBService authService) {
+	public void setAuthService(AuthenDBService authService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAuthService
 		this.authService = authService;
 	}
 	
-	public void setEhrService2(EmployeeProfileService2 ehrService2) {
+	public void setEhrService2(EmployeeProfileService2 ehrService2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEhrService2
 		this.ehrService2 = ehrService2;
 	}
 
-	public void setIpFunctionDao(IPFunctionDao ipFunctionDao) {
+	public void setIpFunctionDao(IPFunctionDao ipFunctionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpFunctionDao
 		this.ipFunctionDao = ipFunctionDao;
 	}
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpEmailNotifyDao(IPEmailNotifyDao ipEmailNotifyDao) {
+	public void setIpEmailNotifyDao(IPEmailNotifyDao ipEmailNotifyDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpEmailNotifyDao
 		this.ipEmailNotifyDao = ipEmailNotifyDao;
 	}
 
-	public void setIpTeamDao(IPTeamDao ipTeamDao) {
+	public void setIpTeamDao(IPTeamDao ipTeamDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpTeamDao
 		this.ipTeamDao = ipTeamDao;
 	}
 
-	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) {
+	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRoleMemberDao
 		this.ipRoleMemberDao = ipRoleMemberDao;
 	}
 	
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 	
-	public void setLdapService(LDAPService ldapService) {
+	public void setLdapService(LDAPService ldapService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLdapService
 		this.ldapService = ldapService;
 	}
 	
-	public void setSsoService(SSOService ssoService) {
+	public void setSsoService(SSOService ssoService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setSsoService
 		this.ssoService = ssoService;
 	}
 	
-	public void setEhrService(EmployeeProfileService ehrService) {
+	public void setEhrService(EmployeeProfileService ehrService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEhrService
 		this.ehrService = ehrService;
 	}
 
-	public void setMainMenuService(MainMenuService mainMenuService) {
+	public void setMainMenuService(MainMenuService mainMenuService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMainMenuService
 		this.mainMenuService = mainMenuService;
 	}
-	public void setInboxService(InboxService inboxService) {
+	public void setInboxService(InboxService inboxService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInboxService
 		this.inboxService = inboxService;
 	}
 	@Override
@@ -188,7 +188,7 @@ public class LoginServiceImpl implements ILoginService{
 		return dd;
 	}
 	
-	public boolean checkInLdap(String userName,String password) throws IPFMBusinessException {
+	public boolean checkInLdap(String userName,String password) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkInLdap
 		boolean result = false;
 		try {
 			System.out.println("---------------- checkInLdap --------------");
@@ -309,7 +309,7 @@ public class LoginServiceImpl implements ILoginService{
 		return ipUser;
 	}
 	
-	public boolean checkInSSO(String userId,String password) throws IPFMBusinessException {
+	public boolean checkInSSO(String userId,String password) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkInSSO
 		boolean result = false;
 		try {
 			System.out.println("---------------- checkInSSO --------------");
@@ -334,7 +334,7 @@ public class LoginServiceImpl implements ILoginService{
 		return result;
 	}
 	
-	public UserVO login(String userId, String password) throws IPFMBusinessException {
+	public UserVO login(String userId, String password) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference login
 		UserVO userSession = new UserVO();
 		try {
 //			test
@@ -418,7 +418,7 @@ public class LoginServiceImpl implements ILoginService{
 		return false;
 	}
 
-	private void validateEffectiveUser(IpUser ipUser) throws IPFMBusinessException {
+	private void validateEffectiveUser(IpUser ipUser) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateEffectiveUser
 		String sysDate = ipUserDao.getSysdate();
 		Date curDate = addDay(sysDate,0);
 		DateFormat dfm2 = new SimpleDateFormat("dd/MM/yyyy",new Locale("en","EN"));
@@ -474,7 +474,7 @@ public class LoginServiceImpl implements ILoginService{
 	}
 
 	@Override
-	public void updateSessionId(String userId, String sessionId)
+	public void updateSessionId(String userId, String sessionId) // DMAP Comment : Dead Code Detected - The Following Method has no reference updateSessionId
 			throws IPFMBusinessException {
 		// TODO Auto-generated method stub
 		try {
@@ -488,7 +488,7 @@ public class LoginServiceImpl implements ILoginService{
 	}
 
 	@Override
-	public IpUser findUserBySessionId(String userId, String sessionId)
+	public IpUser findUserBySessionId(String userId, String sessionId) // DMAP Comment : Dead Code Detected - The Following Method has no reference findUserBySessionId
 			throws IPFMBusinessException {
 		// TODO Auto-generated method stub
 		IpUser ipuser = null;
@@ -503,7 +503,7 @@ public class LoginServiceImpl implements ILoginService{
 	}
 
 	@Override
-	public void checkNewUser(String userId) throws IPFMBusinessException {
+	public void checkNewUser(String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkNewUser
 		IpUser ipUser = getIPUser(userId);
 		if (ipUser==null){
 			ipUser = getEhrByUserId(userId);

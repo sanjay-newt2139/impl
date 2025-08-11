@@ -19,7 +19,7 @@ import th.co.ais.ipfm.util.IPFMDataUtility;
 public class ProjectServiceImpl implements ProjectService {
 	private ProjectDao projectDao;
 	
-	public void setProjectDao(ProjectDao projectDao) {
+	public void setProjectDao(ProjectDao projectDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setProjectDao
 		this.projectDao = projectDao;
 	}
 	

@@ -14,7 +14,7 @@ import th.co.ais.ipfm.service.MainMenuService;
 public class MainMenuServiceImpl implements MainMenuService {
 	private IMainMenuDao mainMenuDao;
 
-	public void setMainMenuDao(IMainMenuDao mainMenuDao) {
+	public void setMainMenuDao(IMainMenuDao mainMenuDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMainMenuDao
 		this.mainMenuDao = mainMenuDao;
 	}
 

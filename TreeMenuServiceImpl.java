@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v1.1.4.3_v8.3.5.2 on Date: 05-Aug-2025 */
 package th.co.ais.ipfm.service.impl;
 
 import java.util.ArrayList;
@@ -16,25 +17,31 @@ public class TreeMenuServiceImpl implements TreeMenuService{
 	private IpvMonitorReqncDao ipvMonitorReqncDao;
 
 
-	public void setMainMenuDao(IMainMenuDao mainMenuDao) {
+	public void setMainMenuDao(IMainMenuDao mainMenuDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setMainMenuDao
 		this.mainMenuDao = mainMenuDao;
 	}
 
-	public void setIpfmCommondDao(IPFMCommondDao ipfmCommondDao) {
+	public void setIpfmCommondDao(IPFMCommondDao ipfmCommondDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpfmCommondDao
 		this.ipfmCommondDao = ipfmCommondDao;
 	}
 	
-	public void setIpvMonitorReqncDao(IpvMonitorReqncDao ipvMonitorReqncDao) {
+	public void setIpvMonitorReqncDao(IpvMonitorReqncDao ipvMonitorReqncDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvMonitorReqncDao
 		this.ipvMonitorReqncDao = ipvMonitorReqncDao;
 	}
 
 	@Override
-	public ArrayList<TreeMenu> getToDoListByUser(String userName) {
+	public ArrayList<TreeMenu> getToDoListByUser(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getToDoListByUser
 		// TODO Auto-generated method stub
 		ArrayList<TreeMenu> returnResult = new ArrayList<TreeMenu>();
 		ArrayList params = new ArrayList();
 		params.add(userName); 
-		List<Map> result = ipfmCommondDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
+/**
+DMAP TAG: Query converted: Identifier4
+DMAP ConvertedQuery - call LIST_TODO_LIST (?,?)
+**/
+
+//		List<Map> result = ipfmCommondDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
+		List<Map> result = ipfmCommondDao.callStore("call LIST_TODO_LIST (?,?)", params);
 		//List<Map> result = ipfmCommondDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
 //		System.out.println(result.size());
 		for(Map map : result){
@@ -53,12 +60,18 @@ public class TreeMenuServiceImpl implements TreeMenuService{
 	}
 
 	@Override
-	public ArrayList<TreeMenu> getWatchListByUser(String userName) {
+	public ArrayList<TreeMenu> getWatchListByUser(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getWatchListByUser
 		// TODO Auto-generated method stub
 		ArrayList<TreeMenu> returnResult = new ArrayList<TreeMenu>();
 		ArrayList params = new ArrayList();
 		params.add(userName);
-		List<Map> result = ipfmCommondDao.callStore("{call LIST_WATCH_LIST(?,?)}", params);
+/**
+DMAP TAG: Query converted: Identifier3
+DMAP ConvertedQuery - call LIST_WATCH_LIST(?,?)
+**/
+
+//		List<Map> result = ipfmCommondDao.callStore("{call LIST_WATCH_LIST(?,?)}", params);
+		List<Map> result = ipfmCommondDao.callStore("call LIST_WATCH_LIST(?,?)", params);
 		for(Map map : result){
 			TreeMenu menu = new TreeMenu();
 			menu.setLevel1((String)map.get("LV1"));
@@ -73,7 +86,7 @@ public class TreeMenuServiceImpl implements TreeMenuService{
 		return returnResult;
 	}
 	@Override
-	public ArrayList<TreeMenu> getMornitorListByUser(String userName) {
+	public ArrayList<TreeMenu> getMornitorListByUser(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getMornitorListByUser
 		// TODO Auto-generated method stub
 		ArrayList<TreeMenu> returnResult = new ArrayList<TreeMenu>();
 		ArrayList params = new ArrayList();
@@ -84,7 +97,13 @@ public class TreeMenuServiceImpl implements TreeMenuService{
 			e.printStackTrace();
 		}
 		params.add(userName);
-		List<Map> result = ipfmCommondDao.callStore("{call LIST_MONITOR_LIST(?,?)}", params);
+/**
+DMAP TAG: Query converted: Identifier2
+DMAP ConvertedQuery - call LIST_MONITOR_LIST(?,?)
+**/
+
+//		List<Map> result = ipfmCommondDao.callStore("{call LIST_MONITOR_LIST(?,?)}", params);
+		List<Map> result = ipfmCommondDao.callStore("call LIST_MONITOR_LIST(?,?)", params);
 		for(Map map : result){
 			TreeMenu menu = new TreeMenu();
 			menu.setLevel1((String)map.get("LV1"));// + " (" + count + ")");

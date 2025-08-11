@@ -14,7 +14,7 @@ public class IpSubUrAttachmentServiceImpl implements IpSubUrAttachmentService {
 	
 	
 	
-	public void setIpSubUrAttachmentDao(IPSubUrAttachmentDao ipSubUrAttachmentDao) {
+	public void setIpSubUrAttachmentDao(IPSubUrAttachmentDao ipSubUrAttachmentDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpSubUrAttachmentDao
 		this.ipSubUrAttachmentDao = ipSubUrAttachmentDao;
 	}
 	@Override
@@ -63,7 +63,7 @@ public class IpSubUrAttachmentServiceImpl implements IpSubUrAttachmentService {
 		
 	}
 	@Override
-	public String findSubUrByUrNoAndSeq(String urNo, String seq)
+	public String findSubUrByUrNoAndSeq(String urNo, String seq) // DMAP Comment : Dead Code Detected - The Following Method has no reference findSubUrByUrNoAndSeq
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;
@@ -75,12 +75,12 @@ public class IpSubUrAttachmentServiceImpl implements IpSubUrAttachmentService {
 	}
 
 	@Override
-	public void deleteSubAttachmentFile(IpSubUrAttachment attachFile) throws IPFMBusinessException {
+	public void deleteSubAttachmentFile(IpSubUrAttachment attachFile) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteSubAttachmentFile
 		ipSubUrAttachmentDao.delete(attachFile);
 		
 	}
 	@Override
-	public void saveAttachFile(IpSubUrAttachment attach) {
+	public void saveAttachFile(IpSubUrAttachment attach) { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveAttachFile
 	String urNo = attach.getId().getUrNo();
 	BigDecimal seqNo = ipSubUrAttachmentDao.getSeqNo(urNo, attach.getId().getCategory());
 	attach.getId().setSeq(seqNo);

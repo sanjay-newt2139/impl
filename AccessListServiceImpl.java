@@ -27,37 +27,37 @@ public class AccessListServiceImpl implements AccessListService{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public void setAccessListDao(IIPAccessListDao accessListDao) {
+	public void setAccessListDao(IIPAccessListDao accessListDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAccessListDao
 		this.accessListDao = accessListDao;
 	}
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 	
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return accessListDao.getSubUrNo(urNo);
 	}
 	
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
 	@Override
-	public IpInfo getIPInfoWithUsedStatus(String ip) {
+	public IpInfo getIPInfoWithUsedStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoWithUsedStatus
 		// TODO Auto-generated method stub
 		String[] status = {"U"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
@@ -69,12 +69,12 @@ public class AccessListServiceImpl implements AccessListService{
 		return accessListDao.getID(cdn.getId());
 	}
 	@Override
-	public List<IpUrAccessListCdn> findByUrNo(String urNo) {
+	public List<IpUrAccessListCdn> findByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		// TODO Auto-generated method stub
 		return accessListDao.findByURNo(urNo);
 	}
 	@Override
-	public IpUrAccessListCdn changeUrNo(IpUrAccessListCdn tempUr, String urNO) {
+	public IpUrAccessListCdn changeUrNo(IpUrAccessListCdn tempUr, String urNO) { // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 		IpUrAccessListCdn newCDN = tempUr;
 		newCDN.getId().setUrNo(urNO);
 		newCDN.setRowId(commonDao.getROW_ID());
@@ -108,13 +108,13 @@ public class AccessListServiceImpl implements AccessListService{
 		}
 	}
 	@Override
-	public IpUrAccessListCdn findAccessListCdn(String urNo, String subUrNo) {
+	public IpUrAccessListCdn findAccessListCdn(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findAccessListCdn
 		IpUrAccessListCdnId id = new IpUrAccessListCdnId(urNo, subUrNo);
 		return accessListDao.getID(id);
 		
 	}
 	@Override
-	public void save(IpUrAccessListCdn cdn) {
+	public void save(IpUrAccessListCdn cdn) { // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 		accessListDao.insert(cdn);
 	}
 	@Override
@@ -130,13 +130,13 @@ public class AccessListServiceImpl implements AccessListService{
 	}
 	
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		accessListDao.commitSubURDelete(urNo,"A");
 		accessListDao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		accessListDao.commitSubURUpdate(urNo,"A");
 		List<IpUrAccessListCdn> alList = accessListDao.waitDeleteUr(urNo);
 		for(IpUrAccessListCdn al : alList){
@@ -150,7 +150,7 @@ public class AccessListServiceImpl implements AccessListService{
 	}
 	
 	@Override
-	public int  fineIpinfo(String ipStart,String ipEnd) {
+	public int  fineIpinfo(String ipStart,String ipEnd) { // DMAP Comment : Dead Code Detected - The Following Method has no reference fineIpinfo
 		return ipInfoDao.findIpinfo(ipStart, ipEnd);
 	}
 

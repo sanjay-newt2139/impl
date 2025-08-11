@@ -20,7 +20,7 @@ public  class IPUserGroupServiceImpl implements IIPUserGroupService{
 
 	
 
-	public void setIpUserGroupDao(IIPUserGroupDao ipUserGroupDao) {
+	public void setIpUserGroupDao(IIPUserGroupDao ipUserGroupDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserGroupDao
 		this.ipUserGroupDao = ipUserGroupDao;
 	}
 

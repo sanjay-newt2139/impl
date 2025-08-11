@@ -21,11 +21,11 @@ public class IPReportServiceImpl implements IPReportService {
 	private IPReportListDao iPReportListDao;
 	private CommonDao commonDao;
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
-	public void setiPReportListDao(IPReportListDao iPReportListDao) {
+	public void setiPReportListDao(IPReportListDao iPReportListDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setiPReportListDao
 		this.iPReportListDao = iPReportListDao;
 	}
 
@@ -45,7 +45,7 @@ public class IPReportServiceImpl implements IPReportService {
 	
 
 	@Override
-	public List<IpReportList> addReportCriteria(IpReportList obj)
+	public List<IpReportList> addReportCriteria(IpReportList obj) // DMAP Comment : Dead Code Detected - The Following Method has no reference addReportCriteria
 			throws Exception {
 		// TODO Auto-generated method stub
 		List<IpReportList> result = new ArrayList<IpReportList>();
@@ -66,7 +66,7 @@ public class IPReportServiceImpl implements IPReportService {
 	}
 
 	@Override
-	public List<IpReportList> deleteReportCriteria(String reportId)throws Exception {
+	public List<IpReportList> deleteReportCriteria(String reportId)throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteReportCriteria
 		// TODO Auto-generated method stub
 		List<IpReportList> result = new ArrayList<IpReportList>();
 		
@@ -131,7 +131,7 @@ public class IPReportServiceImpl implements IPReportService {
 		return result;
 	}
 	
-	public List<String> getURList(String reportId, String urType, String seq, String level, String userId, String tab, String action, String status) throws Exception {
+	public List<String> getURList(String reportId, String urType, String seq, String level, String userId, String tab, String action, String status) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getURList
 		// TODO Auto-generated method stub
 		List<String> result = new ArrayList<String>();
 		

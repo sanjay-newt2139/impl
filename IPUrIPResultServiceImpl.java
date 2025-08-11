@@ -16,7 +16,7 @@ import th.co.ais.ipfm.util.IPFMDataUtility;
 public class IPUrIPResultServiceImpl implements IPUrIPResultService {
 	private IPUrIPResultDao ipUrIPResultDao;
 	
-	public void setIpUrIPResultDao(IPUrIPResultDao ipUrIPResultDao) {
+	public void setIpUrIPResultDao(IPUrIPResultDao ipUrIPResultDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPResultDao
 		this.ipUrIPResultDao = ipUrIPResultDao;
 	}
 	
@@ -53,7 +53,7 @@ public class IPUrIPResultServiceImpl implements IPUrIPResultService {
 		}
 		return result;
 	}
-	public IpUrIpResult addIpUrIpResult(IpUrIpResult ipUrIpResult) throws IPFMBusinessException{
+	public IpUrIpResult addIpUrIpResult(IpUrIpResult ipUrIpResult) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference addIpUrIpResult
 		try {
 			String urNo = ipUrIpResult.getId().getUrNo();
 			BigDecimal seqNo = ipUrIPResultDao.getSeqNo(urNo);
@@ -68,7 +68,7 @@ public class IPUrIPResultServiceImpl implements IPUrIPResultService {
 		}
 		return ipUrIpResult;
 	}
-	public List<IpUrIpResult> addIpUrIpResult(List<IpUrIpResult> ipUrIpResultList) throws IPFMBusinessException{
+	public List<IpUrIpResult> addIpUrIpResult(List<IpUrIpResult> ipUrIpResultList) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference addIpUrIpResult
 		try {
 			for (IpUrIpResult ipUrIpResult : ipUrIpResultList){
 				String urNo = ipUrIpResult.getId().getUrNo();

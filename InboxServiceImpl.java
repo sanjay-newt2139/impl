@@ -42,40 +42,40 @@ public  class InboxServiceImpl implements InboxService{
 	private IpvMonitorReqncDao ipvMonitorReqncDao;	
 	private IPFunctionDao ipFunctionDao;
 
-	public void setIpvWatchReqncDao(IpvWatchReqncDao ipvWatchReqncDao) {
+	public void setIpvWatchReqncDao(IpvWatchReqncDao ipvWatchReqncDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvWatchReqncDao
 		this.ipvWatchReqncDao = ipvWatchReqncDao;
 	}
 
-	public void setIpvWatchUserReqDao(IpvWatchUserReqDao ipvWatchUserReqDao) {
+	public void setIpvWatchUserReqDao(IpvWatchUserReqDao ipvWatchUserReqDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvWatchUserReqDao
 		this.ipvWatchUserReqDao = ipvWatchUserReqDao;
 	}
 
-	public void setIpvWatchPlanningReqDao(
+	public void setIpvWatchPlanningReqDao( // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvWatchPlanningReqDao
 			IpvWatchPlanningReqDao ipvWatchPlanningReqDao) {
 		this.ipvWatchPlanningReqDao = ipvWatchPlanningReqDao;
 	}
 
-	public void setIpvMonitorReqncDao(IpvMonitorReqncDao ipvMonitorReqncDao) {
+	public void setIpvMonitorReqncDao(IpvMonitorReqncDao ipvMonitorReqncDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvMonitorReqncDao
 		this.ipvMonitorReqncDao = ipvMonitorReqncDao;
 	}
 
-	public void setInboxDao(InboxDao inboxDao) {
+	public void setInboxDao(InboxDao inboxDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setInboxDao
 		this.inboxDao = inboxDao;
 	}
 
-	public void setIpvTodoReqncDao(IpvTodoReqncDao ipvTodoReqncDao) {
+	public void setIpvTodoReqncDao(IpvTodoReqncDao ipvTodoReqncDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvTodoReqncDao
 		this.ipvTodoReqncDao = ipvTodoReqncDao;
 	}
 
-	public void setIpvTodoUserReqDao(IpvTodoUserReqDao ipvTodoUserReqDao) {
+	public void setIpvTodoUserReqDao(IpvTodoUserReqDao ipvTodoUserReqDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvTodoUserReqDao
 		this.ipvTodoUserReqDao = ipvTodoUserReqDao;
 	}
 
-	public void setIpvTodoPlanningReqDao(IpvTodoPlanningReqDao ipvTodoPlanningReqDao) {
+	public void setIpvTodoPlanningReqDao(IpvTodoPlanningReqDao ipvTodoPlanningReqDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvTodoPlanningReqDao
 		this.ipvTodoPlanningReqDao = ipvTodoPlanningReqDao;
 	}
 
-	public void setIpFunctionDao(IPFunctionDao ipFunctionDao) {
+	public void setIpFunctionDao(IPFunctionDao ipFunctionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpFunctionDao
 		this.ipFunctionDao = ipFunctionDao;
 	}
 
@@ -168,7 +168,7 @@ public  class InboxServiceImpl implements InboxService{
 	}
 
 	@Override
-	public List<String> getUrTypeList(String urType) throws IPFMBusinessException {
+	public List<String> getUrTypeList(String urType) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getUrTypeList
 		List<String> urTypeList = new ArrayList<String>();
 		try {
 			if (urType==null || urType.trim().length()==0) {
@@ -191,7 +191,7 @@ public  class InboxServiceImpl implements InboxService{
 	}
 	
 	@Override
-	public IpFunction getIpFunction(String funcId) throws IPFMBusinessException{
+	public IpFunction getIpFunction(String funcId) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpFunction
 		IpFunction ipFunction = new IpFunction();
 		try{
 			ipFunction = ipFunctionDao.findIPFunctionByFuncID(funcId);

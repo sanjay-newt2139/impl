@@ -59,96 +59,96 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	private IPTeamDao ipTeamDao;
 	
 	
-	public void setLoginService(ILoginService loginService) {
+	public void setLoginService(ILoginService loginService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLoginService
 		this.loginService = loginService;
 	}
 
-	public void setIpTeamDao(IPTeamDao ipTeamDao) {
+	public void setIpTeamDao(IPTeamDao ipTeamDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpTeamDao
 		this.ipTeamDao = ipTeamDao;
 	}
 	
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 
-	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) {
+	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel2Dao
 		this.ipLevel2Dao = ipLevel2Dao;
 	}
 
-	public void setIpMaskDisplayDao(IpMaskDisplayDao ipMaskDisplayDao) {
+	public void setIpMaskDisplayDao(IpMaskDisplayDao ipMaskDisplayDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpMaskDisplayDao
 		this.ipMaskDisplayDao = ipMaskDisplayDao;
 	}
 
-	public IPUrIPDetailDao getIpUrIPDetailDao() {
+	public IPUrIPDetailDao getIpUrIPDetailDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIPDetailDao
 		return ipUrIPDetailDao;
 	}
 
-	public void setIpUrIPDetailDao(IPUrIPDetailDao ipUrIPDetailDao) {
+	public void setIpUrIPDetailDao(IPUrIPDetailDao ipUrIPDetailDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPDetailDao
 		this.ipUrIPDetailDao = ipUrIPDetailDao;
 	}
-	public IPUrActionDao getIpUrActionDao() {
+	public IPUrActionDao getIpUrActionDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionDao
 		return ipUrActionDao;
 	}
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public IPUrAttachmentDao getIpUrAttachmentDao() {
+	public IPUrAttachmentDao getIpUrAttachmentDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrAttachmentDao
 		return ipUrAttachmentDao;
 	}
 
-	public void setIpUrAttachmentDao(IPUrAttachmentDao ipUrAttachmentDao) {
+	public void setIpUrAttachmentDao(IPUrAttachmentDao ipUrAttachmentDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrAttachmentDao
 		this.ipUrAttachmentDao = ipUrAttachmentDao;
 	}
 
-	public CommonDao getCommonDao() {
+	public CommonDao getCommonDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCommonDao
 		return commonDao;
 	}
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public IPUserDao getIipUserDao() {
+	public IPUserDao getIipUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIipUserDao
 		return iipUserDao;
 	}
 
-	public void setIipUserDao(IPUserDao iipUserDao) {
+	public void setIipUserDao(IPUserDao iipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIipUserDao
 		this.iipUserDao = iipUserDao;
 	}
 
-	public PlanningPLDao getPlanningPLDao() {
+	public PlanningPLDao getPlanningPLDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPlanningPLDao
 		return planningPLDao;
 	}
 
-	public void setPlanningPLDao(PlanningPLDao planningPLDao) {
+	public void setPlanningPLDao(PlanningPLDao planningPLDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPlanningPLDao
 		this.planningPLDao = planningPLDao;
 	}
 
-	public IPUrActionHistoryDao getIpUrActionHistoryDao() {
+	public IPUrActionHistoryDao getIpUrActionHistoryDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionHistoryDao
 		return ipUrActionHistoryDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
-	public IPUrIPResultDao getIpUrIPResultDao() {
+	public IPUrIPResultDao getIpUrIPResultDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIPResultDao
 		return ipUrIPResultDao;
 	}
 
-	public void setIpUrIPResultDao(IPUrIPResultDao ipUrIPResultDao) {
+	public void setIpUrIPResultDao(IPUrIPResultDao ipUrIPResultDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPResultDao
 		this.ipUrIPResultDao = ipUrIPResultDao;
 	}
 	
-	public IPLevel1Dao getIpLevel1Dao() {
+	public IPLevel1Dao getIpLevel1Dao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpLevel1Dao
 		return ipLevel1Dao;
 	}
 
-	public void setIpLevel1Dao(IPLevel1Dao ipLevel1Dao) {
+	public void setIpLevel1Dao(IPLevel1Dao ipLevel1Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel1Dao
 		this.ipLevel1Dao = ipLevel1Dao;
 	}
 	@Override
-	public IpUrIpDetail createDraft(IpUrIpDetail ipUrIpdetail ,IpUrAttachment ipUrAttachment) throws IPFMBusinessException {
+	public IpUrIpDetail createDraft(IpUrIpDetail ipUrIpdetail ,IpUrAttachment ipUrAttachment) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createDraft
 		try {
 			if(ipUrIpdetail != null){
 				IpUser ipUser = checkNewUser(ipUrIpdetail.getSysOwnerId());
@@ -171,7 +171,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 	
 	@Override
-	public IpUrIpDetail updateDraft(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException {
+	public IpUrIpDetail updateDraft(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateDraft
 		try {
 			IpUser ipUser = checkNewUser(ipUrIpdetail.getSysOwnerId());
 			if (IPFMUtils.ifBlank(ipUrIpdetail.getSysOwnerTeamName(),"").length()>0 
@@ -195,7 +195,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 
 	@Override
-	public IpUrIpDetail createSendForAssign(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException {
+	public IpUrIpDetail createSendForAssign(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createSendForAssign
 		try {
 			if(ipUrIpdetail != null){
 				IpUser ipUser = checkNewUser(ipUrIpdetail.getSysOwnerId());
@@ -222,7 +222,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 
 	@Override
-	public IpUrIpDetail updateSendForAssign(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException, Exception {
+	public IpUrIpDetail updateSendForAssign(IpUrIpDetail ipUrIpdetail) throws IPFMBusinessException, Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateSendForAssign
 		try {
 			if(ipUrIpdetail != null){
 				IpUser ipUser = checkNewUser(ipUrIpdetail.getSysOwnerId());
@@ -244,7 +244,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 
 	@Override
-	public IpUrIpDetail deleteUR(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException {
+	public IpUrIpDetail deleteUR(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteUR
 		try {
 			if(ipUrIpdetail != null && ipUrAttachment !=null){			
 				ipUrIPDetailDao.delete(ipUrIpdetail);
@@ -266,7 +266,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}	
 	
 	@Override
-	public void  rejectUR(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException {
+	public void  rejectUR(IpUrIpDetail ipUrIpdetail,IpUrAttachment ipUrAttachment) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference rejectUR
 		try {
 			if(ipUrIpdetail != null && ipUrAttachment !=null){
 				ipUrIpdetail.setUrStatus(IPFMConstant.STATUS_REJECT_BY_CDN);
@@ -296,7 +296,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 	
 	@Override
-	public List<IpTeam> getSystemOwnerTeamList() throws IPFMBusinessException {
+	public List<IpTeam> getSystemOwnerTeamList() throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSystemOwnerTeamList
 		List<IpTeam> systemOwnerList = null;
 		try {
 			  systemOwnerList = iipUserDao.getSystemOwnerTeamTier2List();
@@ -328,7 +328,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 	
 	@Override
-	public IpUrIpDetail getIpUrIpDetail(String URNo) throws IPFMBusinessException {
+	public IpUrIpDetail getIpUrIpDetail(String URNo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIpDetail
 		IpUrIpDetail ipUrIpDetail = null;
 		try {
 			if(URNo!=null){
@@ -418,7 +418,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 
 	@Override
-	public void createAssignIP(IpUrIpResult ipUrIpResult, IpLevel1 ipLevel1) throws IPFMBusinessException {
+	public void createAssignIP(IpUrIpResult ipUrIpResult, IpLevel1 ipLevel1) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createAssignIP
 		try {
 			if(ipUrIpResult != null && ipLevel1 != null){ 
 				String rowId = commonDao.getROW_ID();
@@ -444,7 +444,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 		
 	}
 	@Override
-	public void createAssignIP(IpUrIpDetail ipUrIpDetail, List<IpUrIpResult> ipUrIpResultList, List<IpLevel1> ipLevel1List) throws IPFMBusinessException {
+	public void createAssignIP(IpUrIpDetail ipUrIpDetail, List<IpUrIpResult> ipUrIpResultList, List<IpLevel1> ipLevel1List) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createAssignIP
 		try {
 			for (IpLevel1 ipLevel1 : ipLevel1List) {
 				String resultDup = checkDuplicateIP(ipLevel1.getBinary1Start(), ipLevel1.getBinary1End(), "1");
@@ -583,7 +583,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 
 	@Override
-	public IpUrAction getIpUrAction(String urNo) throws IPFMBusinessException {
+	public IpUrAction getIpUrAction(String urNo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrAction
 		IpUrAction urAction;
 		try {
 			urAction = ipUrActionDao.findUrAction(urNo,"NA");
@@ -627,7 +627,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 	
 	@Override
-	public IpInfo checkStatusDataIpInfo(String ipDigit1, String ipDigit2, String ipDigit3, String ipDigit4) throws IPFMBusinessException {
+	public IpInfo checkStatusDataIpInfo(String ipDigit1, String ipDigit2, String ipDigit3, String ipDigit4) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkStatusDataIpInfo
 		IpInfo result = null;
 		try {
 			result = ipInfoDao.findIpInfo(ipDigit1,ipDigit2,ipDigit3,ipDigit4);
@@ -660,7 +660,7 @@ public class PlanningReqIPServiceImp implements PlanningReqIPService {
 	}
 	
 	@Override
-	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException {
+	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpTeamById
 		IpTeam ipTeam = null;
 		try {
 			if (teamId!=null && !teamId.trim().equalsIgnoreCase("NA")) {

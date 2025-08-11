@@ -51,7 +51,7 @@ import th.co.ais.ipfm.util.IPFMUtils;
 
 
 public class ManagementIpServiceImpl implements ManagementIpService{
-	private Logger logger = Logger.getLogger(ManagementIpServiceImpl.class);
+	private Logger logger = Logger.getLogger(ManagementIpServiceImpl.class); // DMAP Comment : Dead Code Detected - The Following Field has no reference logger
 	
 	private IPLevel1Dao ipLevel1Dao;
 	private IPLevel2Dao ipLevel2Dao;
@@ -69,59 +69,59 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	private IIPLogVerifyDAO ipLogVerifyDao;
 	
 	
-	public void setLoginService(ILoginService loginService) {
+	public void setLoginService(ILoginService loginService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setLoginService
 		this.loginService = loginService;
 	}
 
-	public void setIpTeamDao(IPTeamDao ipTeamDao) {
+	public void setIpTeamDao(IPTeamDao ipTeamDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpTeamDao
 		this.ipTeamDao = ipTeamDao;
 	}
 
-	public void setTempIpLevel2Dao(TempIPLevel2Dao tempIpLevel2Dao) {
+	public void setTempIpLevel2Dao(TempIPLevel2Dao tempIpLevel2Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setTempIpLevel2Dao
 		this.tempIpLevel2Dao = tempIpLevel2Dao;
 	}
 
-	public void setIpLevel2HistoryDao(IPLevel2HistoryDao ipLevel2HistoryDao) {
+	public void setIpLevel2HistoryDao(IPLevel2HistoryDao ipLevel2HistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel2HistoryDao
 		this.ipLevel2HistoryDao = ipLevel2HistoryDao;
 	}
 
-	public void setIpInfoHistoryDao(IPInfoHistoryDAO ipInfoHistoryDao) {
+	public void setIpInfoHistoryDao(IPInfoHistoryDAO ipInfoHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoHistoryDao
 		this.ipInfoHistoryDao = ipInfoHistoryDao;
 	}
 
-	public void setIpvNetworkIpDao(IpvNetworkIpDao ipvNetworkIpDao) {
+	public void setIpvNetworkIpDao(IpvNetworkIpDao ipvNetworkIpDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpvNetworkIpDao
 		this.ipvNetworkIpDao = ipvNetworkIpDao;
 	}
 
-	public void setIpLevel1Dao(IPLevel1Dao ipLevel1Dao) {
+	public void setIpLevel1Dao(IPLevel1Dao ipLevel1Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel1Dao
 		this.ipLevel1Dao = ipLevel1Dao;
 	}
 
-	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) {
+	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel2Dao
 		this.ipLevel2Dao = ipLevel2Dao;
 	}
 
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 
-	public void setCallProcedureDao(CallProcedureDao callProcedureDao) {
+	public void setCallProcedureDao(CallProcedureDao callProcedureDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCallProcedureDao
 		this.callProcedureDao = callProcedureDao;
 	}
 	
-	public void setIpfmCommondDao(IPFMCommondDao ipfmCommondDao) {
+	public void setIpfmCommondDao(IPFMCommondDao ipfmCommondDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpfmCommondDao
 		this.ipfmCommondDao = ipfmCommondDao;
 	}
 	
-	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) {
+	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRoleMemberDao
 		this.ipRoleMemberDao = ipRoleMemberDao;
 	}
 
-	public void setIpInfoTempDao(IIPInfoTempDAO ipInfoTempDao){
+	public void setIpInfoTempDao(IIPInfoTempDAO ipInfoTempDao){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoTempDao
 		this.ipInfoTempDao = ipInfoTempDao;
 	}
 	
-	public void setIpLogVerifyDao(IIPLogVerifyDAO ipLogVerifyDao){
+	public void setIpLogVerifyDao(IIPLogVerifyDAO ipLogVerifyDao){ // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLogVerifyDao
 		this.ipLogVerifyDao = ipLogVerifyDao;
 	}
 	@Override
@@ -185,7 +185,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public List<IpLevel1> searchIpManagementLevel1(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask,Integer maxSearchResult) throws IPFMBusinessException {
+	public List<IpLevel1> searchIpManagementLevel1(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask,Integer maxSearchResult) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpManagementLevel1
 		List<IpLevel1> result = new ArrayList<IpLevel1>();
 		try {
 			IpLevel1 ipLevel1 = callProcedureDao.getIpLevel1StartEnd(ip1, ip2, ip3, ip4, mask);
@@ -215,7 +215,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 	
 	@Override
-	public List<IpLevel1> searchIpManagementLevel1ByTeam(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask, String teamId,Integer maxSearchResult) throws IPFMBusinessException {
+	public List<IpLevel1> searchIpManagementLevel1ByTeam(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask, String teamId,Integer maxSearchResult) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpManagementLevel1ByTeam
 		List<IpLevel1> result = new ArrayList<IpLevel1>();
 		try {
 			IpLevel1 ipLevel1 = callProcedureDao.getIpLevel1StartEnd(ip1, ip2, ip3, ip4, mask);
@@ -245,7 +245,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public IpLevel1 saveIpLevel1(IpLevel1 ipLevel1,String updateBy) throws IPFMBusinessException {
+	public IpLevel1 saveIpLevel1(IpLevel1 ipLevel1,String updateBy) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveIpLevel1
 		try {
 			Date updateDate = new Timestamp(new Date().getTime());	
 			if (ipLevel1.getIpStatusOld().equalsIgnoreCase("P") && ipLevel1.getIpStatus().equalsIgnoreCase("N")) {
@@ -271,7 +271,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 	
 	@Override
-	public List<IpLevel2> searchIpManagementLevel2(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask,Integer maxSearchResult) throws IPFMBusinessException {
+	public List<IpLevel2> searchIpManagementLevel2(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask,Integer maxSearchResult) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpManagementLevel2
 		List<IpLevel2> result = new ArrayList<IpLevel2>();
 		try {
 			
@@ -363,7 +363,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public List<IpLevel2> searchIpManagementLevel2ByTeam(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask, String teamId,Integer maxSearchResult) throws IPFMBusinessException {
+	public List<IpLevel2> searchIpManagementLevel2ByTeam(String ipVersion, String ip1, String ip2, String ip3, String ip4, String mask, String teamId,Integer maxSearchResult) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpManagementLevel2ByTeam
 		List<IpLevel2> result = new ArrayList<IpLevel2>();
 		try {
 //			callProcedureDao.processIpLevel2(ip1, ip2, ip3, ip4, mask, teamId);
@@ -398,7 +398,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 	
 	@Override
-	public IpLevel2 saveIpLevel2(IpLevel2 ipLevel2,String updateBy) throws IPFMBusinessException {
+	public IpLevel2 saveIpLevel2(IpLevel2 ipLevel2,String updateBy) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveIpLevel2
 		try {
 			Date updateDate = new Timestamp(new Date().getTime());			
 			if (ipLevel2.getIpStatus().equalsIgnoreCase("N")) {
@@ -444,7 +444,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return ipLevel2;
 	}
 	
-	public void saveIpLevel2(List<IpLevel2> ipLevel2List, String updateBy) throws IPFMBusinessException {
+	public void saveIpLevel2(List<IpLevel2> ipLevel2List, String updateBy) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveIpLevel2
 		try {
 			Date updateDate = new Timestamp(new Date().getTime());			
 			for (IpLevel2 ipLevel2 : ipLevel2List) {
@@ -502,7 +502,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return ipUser;
 	}
 	@Override
-	public IpInfo updateIpInfo(String oldIpStatus, IpInfo ipInfo, String updateBy) throws IPFMBusinessException {
+	public IpInfo updateIpInfo(String oldIpStatus, IpInfo ipInfo, String updateBy) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpInfo
 		try {
 			IpLevel2 ipLevel2 = ipLevel2Dao.findIpLevel2ByLevel2Id(ipInfo.getLevel2Id());
 			updateStatusValue(ipLevel2,oldIpStatus,ipInfo.getIpStatus());
@@ -579,7 +579,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public List<IpRoleMember> findIpRoleMemberByUserId(String userId) throws IPFMBusinessException {
+	public List<IpRoleMember> findIpRoleMemberByUserId(String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpRoleMemberByUserId
 		List<IpRoleMember> resultList = new ArrayList<IpRoleMember>();
 		try {
 			resultList = ipRoleMemberDao.findIpRoleMembersByUserId(userId);
@@ -594,7 +594,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public List<IpInfo> searchIpManagementLevel3(String ipAddress, String tier2TeamId, String sysOwnerTeamId, String sysOwnerId,Integer maxSearchResult) throws IPFMBusinessException {
+	public List<IpInfo> searchIpManagementLevel3(String ipAddress, String tier2TeamId, String sysOwnerTeamId, String sysOwnerId,Integer maxSearchResult) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference searchIpManagementLevel3
 		List<IpInfo> resultList = new ArrayList<IpInfo>();
 		try {
 //			System.out.println("--- searchIpManagementLevel3 ---");
@@ -711,7 +711,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	
 	
 	@Override
-	public void updateIpLevel2ExpireDate(List<IpLevel2> ipLevel2List) throws IPFMBusinessException {
+	public void updateIpLevel2ExpireDate(List<IpLevel2> ipLevel2List) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpLevel2ExpireDate
 		try {
 			for (IpLevel2 lv2 : ipLevel2List) {
 				ipLevel2Dao.update(lv2);
@@ -726,7 +726,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public void updateIpInfoExpireDate(List<IpInfo> ipInfoList) throws IPFMBusinessException {
+	public void updateIpInfoExpireDate(List<IpInfo> ipInfoList) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpInfoExpireDate
 		try {
 			for (IpInfo ipInfo : ipInfoList) {
 				ipInfoDao.update(ipInfo);
@@ -740,7 +740,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		}
 	}
 	@Override
-	public void ipInfoAssignToPlanning(IpInfo ipInfo,String updateBy) throws IPFMBusinessException{
+	public void ipInfoAssignToPlanning(IpInfo ipInfo,String updateBy) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference ipInfoAssignToPlanning
 		try {
 			IpLevel2 ipLevel2 = ipLevel2Dao.findIpLevel2ByLevel2Id(ipInfo.getLevel2Id());
 			ipLevel2.setTerminateIp(ipLevel2.getTerminateIp().add(new BigDecimal(1)));
@@ -760,7 +760,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		}
 	}
 	@Override
-	public IpLevel2History copyIpLevel2History(IpLevel2 bean) throws IPFMBusinessException{
+	public IpLevel2History copyIpLevel2History(IpLevel2 bean) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference copyIpLevel2History
 		IpLevel2History history = null;
 		try {
 			history = new IpLevel2History();
@@ -899,7 +899,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return history;
 	}
 	@Override
-	public void ipLevel2AssignToAvailable(IpLevel2 ipLevel2) throws IPFMBusinessException{
+	public void ipLevel2AssignToAvailable(IpLevel2 ipLevel2) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference ipLevel2AssignToAvailable
 		try {
 			IpLevel1 ipLevel1 = ipLevel1Dao.findIpLevel1ByLevel1Id(ipLevel2.getLevel1Id());
 			ipLevel1.setTotalT2Assign(ipLevel1.getTotalT2Assign().subtract(ipLevel2.getTotalIp()));
@@ -929,7 +929,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 	
 	@Override
-	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException {
+	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpTeamById
 		IpTeam ipTeam = null;
 		try {
 			if (teamId!=null && !teamId.trim().equalsIgnoreCase("NA")) {
@@ -979,7 +979,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return overExpired;
 	}
 	
-	public void updateIpInfo(List<IpInfo> ipInfoList, String updateBy) throws IPFMBusinessException {
+	public void updateIpInfo(List<IpInfo> ipInfoList, String updateBy) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIpInfo
 		IpUser tempIpUser = null;
 		IpUser ipUser = null;
 		String tempSystemOwner = null;
@@ -1042,7 +1042,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		}
 	}	
 	
-	public List<IpInfo> checkDupVlan(IpInfo ipInfo) throws IPFMBusinessException {
+	public List<IpInfo> checkDupVlan(IpInfo ipInfo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkDupVlan
 		List<IpInfo> ipInfoList;
 		try {
 			ipInfoList = ipInfoDao.findIpInfoByVlan(ipInfo);
@@ -1056,7 +1056,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return ipInfoList;
 	}	
 	
-	public boolean deleteAndInsertIpInfoTemp(List<IpInfoTemp> ipInfoTempList,String username) throws IPFMBusinessException {
+	public boolean deleteAndInsertIpInfoTemp(List<IpInfoTemp> ipInfoTempList,String username) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndInsertIpInfoTemp
 		boolean result = false;
 		try {
 			ipInfoTempDao.deleteIpInfoTempByCreateBy(ipInfoTempList.get(0).getCreatedBy());
@@ -1073,7 +1073,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return result;
 	}
 	
-	public HashMap verifyIpInfoTemp(List<IpInfoTemp> ipInfoTempList,String username,String userRole) throws IPFMBusinessException {
+	public HashMap verifyIpInfoTemp(List<IpInfoTemp> ipInfoTempList,String username,String userRole) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference verifyIpInfoTemp
 		Map resultMap;
 		int error = 0;
 		int warn = 0;
@@ -1099,14 +1099,14 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 		return responseMap;
 	}
 	
-	public List<IpLogVerify> findIpLogVerifyByUsername(String username) throws IPFMBusinessException{
+	public List<IpLogVerify> findIpLogVerifyByUsername(String username) throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpLogVerifyByUsername
 		if(StringUtils.isNotEmpty(username)){
 			return ipLogVerifyDao.findIpLogVerify(username);
 		}
 		return null;
 	}
 	
-	public void saveImportIpLv3(String username)  throws IPFMBusinessException{
+	public void saveImportIpLv3(String username)  throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference saveImportIpLv3
 		try{
 			if(StringUtils.isNotEmpty(username)){
 				callProcedureDao.updateImportLv3(username);
@@ -1117,7 +1117,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public boolean checkPermissionUpdateNatIP(String userId, String ip) throws IPFMBusinessException {
+	public boolean checkPermissionUpdateNatIP(String userId, String ip) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference checkPermissionUpdateNatIP
 		boolean result = false;
 		try{
 			if(StringUtils.isNotEmpty(userId)){
@@ -1183,7 +1183,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public void insertLogVerify(String ip, String type, String msg,String username) throws IPFMBusinessException {
+	public void insertLogVerify(String ip, String type, String msg,String username) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference insertLogVerify
 		try{
 			if(StringUtils.isNotEmpty(username) && StringUtils.isNotEmpty(ip) && StringUtils.isNotEmpty(type) && StringUtils.isNotEmpty(msg)){
 				ipInfoTempDao.insertErrorLog(ip, type, msg, username);
@@ -1209,7 +1209,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public IPLevel3NatHistory validateInsertNatHis(String ip, String natIP,String username) throws IPFMBusinessException {
+	public IPLevel3NatHistory validateInsertNatHis(String ip, String natIP,String username) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateInsertNatHis
 		IPLevel3NatHistory result = new IPLevel3NatHistory();
 		try{
 			IpInfo ipInfo =   ipInfoDao.findIpInfo(ip);	
@@ -1246,7 +1246,7 @@ public class ManagementIpServiceImpl implements ManagementIpService{
 	}
 
 	@Override
-	public List<IPMasterValue> getMasterList(String group) throws IPFMBusinessException {		
+	public List<IPMasterValue> getMasterList(String group) throws IPFMBusinessException {		 // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterList
 		List<IPMasterValue> result = new ArrayList<IPMasterValue>();
 		try{
 			if(group != null){

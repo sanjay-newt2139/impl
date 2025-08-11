@@ -23,27 +23,27 @@ public class TeamManageServiceImp implements TeamManageService {
 	private IPUserDao iipUserDao;
 	
 
-	public IIPUserDao getIpUserDao() {
+	public IIPUserDao getIpUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserDao
 		return ipUserDao;
 	}
 
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 
-	public IPTeamDao getIpTeamDao() {
+	public IPTeamDao getIpTeamDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpTeamDao
 		return ipTeamDao;
 	}
 
-	public void setIpTeamDao(IPTeamDao ipTeamDao) {
+	public void setIpTeamDao(IPTeamDao ipTeamDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpTeamDao
 		this.ipTeamDao = ipTeamDao;
 	}
 
-	public IPUserDao getIipUserDao() {
+	public IPUserDao getIipUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIipUserDao
 		return iipUserDao;
 	}
 
-	public void setIipUserDao(IPUserDao iipUserDao) {
+	public void setIipUserDao(IPUserDao iipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIipUserDao
 		this.iipUserDao = iipUserDao;
 	}
 
@@ -112,7 +112,7 @@ public class TeamManageServiceImp implements TeamManageService {
 		return ipTeamList;
 	}
 	@Override
-	public List<IpTeam> deleteTeamId(String teamId)throws IPFMBusinessException {
+	public List<IpTeam> deleteTeamId(String teamId)throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteTeamId
 		List<IpTeam> ipTeamList = null;
 		try {
 			IpTeam ipTeam = ipTeamDao.getIpTeam(teamId);
@@ -162,7 +162,7 @@ public class TeamManageServiceImp implements TeamManageService {
 	}
 
 	@Override
-	public List<IpUser> addTeam(IpUser ipUser) throws IPFMBusinessException {
+	public List<IpUser> addTeam(IpUser ipUser) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addTeam
 		 List<IpUser> ipUserList =null;
 		try {
 			 int counts = ipUserDao.getCheckDuplicate(ipUser.getUserId(), ipUser.getTeamId());
@@ -205,7 +205,7 @@ public class TeamManageServiceImp implements TeamManageService {
 	}
 	
 	@Override
-	public void saveMember(IpTeam ipTeam) throws IPFMBusinessException {	
+	public void saveMember(IpTeam ipTeam) throws IPFMBusinessException {	 // DMAP Comment : Dead Code Detected - The Following Method has no reference saveMember
 		try {
 			IpTeam  obj = ipTeamDao.getIpTeam(ipTeam.getTeamId());
 			obj.setTeamName(ipTeam.getTeamName());
@@ -223,7 +223,7 @@ public class TeamManageServiceImp implements TeamManageService {
 	}
 
 	@Override
-	public List<IpTeam> addTeamManage(IpTeam ipTeam) throws IPFMBusinessException {
+	public List<IpTeam> addTeamManage(IpTeam ipTeam) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addTeamManage
 		 List<IpTeam> ipTeamList =null;
 			try {
 				  String v_status = ipTeamDao.ipTeamByTeamName(ipTeam.getTeamName());

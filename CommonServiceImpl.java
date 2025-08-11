@@ -28,11 +28,11 @@ public  class CommonServiceImpl implements CommonService{
 	
 	
 	
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
-	public void setIpParameterDao(IIPParameterDao ipParameterDao) {
+	public void setIpParameterDao(IIPParameterDao ipParameterDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpParameterDao
 		this.ipParameterDao = ipParameterDao;
 	}
 
@@ -63,7 +63,7 @@ public  class CommonServiceImpl implements CommonService{
 
 
 	@Override
-	public HashMap<String, Object> getAllMasterList() throws IPFMBusinessException {
+	public HashMap<String, Object> getAllMasterList() throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAllMasterList
 		HashMap<String, Object> result = new HashMap<String, Object>();
 		try { 
 			result.put(IPFMConstant.MCODE_LOCAT, commonDao.getMasterList(IPFMConstant.MCODE_LOCAT));
@@ -118,7 +118,7 @@ public  class CommonServiceImpl implements CommonService{
 	}
 
 	@Override
-	public IpMasterTable createMasterTBL(IpMasterTable masterTBL)throws IPFMBusinessException {
+	public IpMasterTable createMasterTBL(IpMasterTable masterTBL)throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference createMasterTBL
 		try {
 			if(masterTBL!=null){
 				List<IpMasterTable> list =commonDao.searchMasterTableForADD(masterTBL.getId().getRefTable(), masterTBL.getId().getRefKey().trim(),"");				
@@ -152,7 +152,7 @@ public  class CommonServiceImpl implements CommonService{
 	}
 
 	@Override
-	public IpMasterTable getMasterTBL(String rowId)
+	public IpMasterTable getMasterTBL(String rowId) // DMAP Comment : Dead Code Detected - The Following Method has no reference getMasterTBL
 			throws IPFMBusinessException {
 		IpMasterTable masterTBL = null;
 		try {
@@ -168,7 +168,7 @@ public  class CommonServiceImpl implements CommonService{
 
 
 	@Override
-	public IpMasterTable updateMasterTBL(IpMasterTable masterTBL)
+	public IpMasterTable updateMasterTBL(IpMasterTable masterTBL) // DMAP Comment : Dead Code Detected - The Following Method has no reference updateMasterTBL
 			throws IPFMBusinessException {
 		try {
 
@@ -203,7 +203,7 @@ public  class CommonServiceImpl implements CommonService{
 	}
 	
 	@Override
-	public void deleteMasterTable(IpMasterTable masterTBL)throws IPFMBusinessException {
+	public void deleteMasterTable(IpMasterTable masterTBL)throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteMasterTable
 		try {
 			if(masterTBL!=null){
 				commonDao.delete(masterTBL);
@@ -214,7 +214,7 @@ public  class CommonServiceImpl implements CommonService{
 	}
 
 	@Override
-	public List<IpMasterTable> deleteAndReSearchMasterTable(String rowId, String refTable, String refKey)
+	public List<IpMasterTable> deleteAndReSearchMasterTable(String rowId, String refTable, String refKey) // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndReSearchMasterTable
 			throws IPFMBusinessException {
 		List<IpMasterTable> masterTBLList = null;
 		IpMasterTable masterTBL = commonDao.getMasterById(rowId);
@@ -228,7 +228,7 @@ public  class CommonServiceImpl implements CommonService{
 
 
 	@Override
-	public List<Suggestion> findSuggestion(String refID, String key) {
+	public List<Suggestion> findSuggestion(String refID, String key) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findSuggestion
 		List<IpMasterTable> listMaster = commonDao.searchMasterTable(refID, key);
 		List<Suggestion> returnResult = new ArrayList<Suggestion>();
 		for(IpMasterTable master : listMaster){
@@ -249,14 +249,14 @@ public  class CommonServiceImpl implements CommonService{
 	}
 
 	@Override
-	public List<IpMasterTable> findMasterTableByRefKey(String ref) {
+	public List<IpMasterTable> findMasterTableByRefKey(String ref) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findMasterTableByRefKey
 		return commonDao.getMasterRefKeyList(ref);
 //		return commonDao.getMasterTableList(ref);
 	}
 
 
 	@Override
-	public List<IpMasterTable> deleteAndListMasterTable(String rowId, String refTable, String refKey,String userId) throws IPFMBusinessException {
+	public List<IpMasterTable> deleteAndListMasterTable(String rowId, String refTable, String refKey,String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndListMasterTable
 		List<IpMasterTable> masterTBLList = null;
 		IpMasterTable masterTBL = commonDao.getMasterById(rowId);
 		if(masterTBL!=null){
@@ -275,13 +275,13 @@ public  class CommonServiceImpl implements CommonService{
 		return masterTBLList;
 	}
 
-	public String callBatchGenReport()throws IPFMBusinessException{
+	public String callBatchGenReport()throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference callBatchGenReport
 		
 		//gen_report_iprur001
 		return commonDao.genReport();
 	}
 	
-	public String callBatchUpdateUROverSlaOla()throws IPFMBusinessException{
+	public String callBatchUpdateUROverSlaOla()throws IPFMBusinessException{ // DMAP Comment : Dead Code Detected - The Following Method has no reference callBatchUpdateUROverSlaOla
 		//update_ur_over_ola_sla
 		return commonDao.updateUROverSlaOla();
 	}

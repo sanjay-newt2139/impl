@@ -15,16 +15,16 @@ public class IpUrActionServiceImpl implements IpUrActionService {
 	private IPUrActionDao ipUrActionDao;
 	private IPEmailNotifyDao ipEmailNotify;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpEmailNotify(IPEmailNotifyDao ipEmailNotify) {
+	public void setIpEmailNotify(IPEmailNotifyDao ipEmailNotify) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpEmailNotify
 		this.ipEmailNotify = ipEmailNotify;
 	}
 
 	@Override
-	public void saveEmailNotify(IpEmailNotify notify) throws IPFMBusinessException {
+	public void saveEmailNotify(IpEmailNotify notify) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveEmailNotify
 		try{
 			ipEmailNotify.insert(notify);	
 		} catch(Exception e) {
@@ -44,7 +44,7 @@ public class IpUrActionServiceImpl implements IpUrActionService {
 	}
 
 	@Override
-	public void updateEmailNotify(IpEmailNotify notify) {
+	public void updateEmailNotify(IpEmailNotify notify) { // DMAP Comment : Dead Code Detected - The Following Method has no reference updateEmailNotify
 		ipEmailNotify.update(notify);
 		
 	}
@@ -65,7 +65,7 @@ public class IpUrActionServiceImpl implements IpUrActionService {
 	}
 	
 	@Override
-	public void deleteNotify(String urNo,String urStatus){
+	public void deleteNotify(String urNo,String urStatus){ // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteNotify
 		if((urStatus!=null) && !(urStatus.equals(""))){
 			ipEmailNotify.deleteNotibyByStatus(urNo, urStatus);
 		} else {
@@ -79,7 +79,7 @@ public class IpUrActionServiceImpl implements IpUrActionService {
 	}
 
 	@Override
-	public List<IpUrAction> getIpUrAction(String urNo) {
+	public List<IpUrAction> getIpUrAction(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrAction
 		List<IpUrAction> ipUrActionList = null;
 		ipUrActionList = ipUrActionDao.getURAction(urNo);
 		

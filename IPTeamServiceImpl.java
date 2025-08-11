@@ -15,7 +15,7 @@ import th.co.ais.ipfm.util.IPFMDataUtility;
 public class IPTeamServiceImpl implements IPTeamService {
 	private IPTeamDao ipTeamDao;
 
-	public void setIpTeamDao(IPTeamDao ipTeamDao) {
+	public void setIpTeamDao(IPTeamDao ipTeamDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpTeamDao
 		this.ipTeamDao = ipTeamDao;
 	}
 
@@ -34,7 +34,7 @@ public class IPTeamServiceImpl implements IPTeamService {
 	}
 	
 	@Override
-	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException {
+	public IpTeam findIpTeamById(String teamId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpTeamById
 		IpTeam result = null;
 		try {
 			if (teamId!=null) {

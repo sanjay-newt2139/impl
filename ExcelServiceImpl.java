@@ -31,17 +31,17 @@ public class ExcelServiceImpl implements ExcelService {
 	private IPUrIPResultService ipUrIPResultService;
 	private IPLevel2Dao ipLevel2Dao;
 
-	public void setIpUrIPResultService(IPUrIPResultService ipUrIPResultService) {
+	public void setIpUrIPResultService(IPUrIPResultService ipUrIPResultService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPResultService
 		this.ipUrIPResultService = ipUrIPResultService;
 	}
-	public IPLevel2Dao getIpLevel2Dao() {
+	public IPLevel2Dao getIpLevel2Dao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpLevel2Dao
 		return ipLevel2Dao;
 	}
-	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) {
+	public void setIpLevel2Dao(IPLevel2Dao ipLevel2Dao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpLevel2Dao
 		this.ipLevel2Dao = ipLevel2Dao;
 	}
 	@SuppressWarnings("unchecked")
-	public Map userRequestIPImport(File file, String sheetName,IpUrIpDetail ipUrIpDetail, IpUrIpResult ipResult, String userTeamId, String userId) throws IPFMBusinessException {
+	public Map userRequestIPImport(File file, String sheetName,IpUrIpDetail ipUrIpDetail, IpUrIpResult ipResult, String userTeamId, String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference userRequestIPImport
 		//Map key
 		//1. result
 		//2. errorMsg
@@ -247,7 +247,7 @@ public class ExcelServiceImpl implements ExcelService {
 			}
 		}
 	}
-	public void validateAssignInfo(IpUrIpResult ipUrIpResult, ExcelErrorMsg excelMsg) {
+	public void validateAssignInfo(IpUrIpResult ipUrIpResult, ExcelErrorMsg excelMsg) { // DMAP Comment : Dead Code Detected - The Following Method has no reference validateAssignInfo
 //		if (IPFMUtils.ifBlank(ipUrIpResult.getIpVersion(), "").trim().length()==0) {
 //			addErrorMsg(excelMsg, IPFMDataUtility.buildMessage(ErrorMessageUtil.getMessage("ER0001"), "IP Version"));
 //		}
@@ -293,7 +293,7 @@ public class ExcelServiceImpl implements ExcelService {
 	}
 
 	@SuppressWarnings("unchecked")
-	public IpUrIpResult getIpUrIpResultData(IpUrIpDetail ipUrIpDetail,String userName, Map map) throws Exception{
+	public IpUrIpResult getIpUrIpResultData(IpUrIpDetail ipUrIpDetail,String userName, Map map) throws Exception{ // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIpResultData
 		IpUrIpResult ipUrIpResult = new IpUrIpResult();
 		IpUrIpResultId id = new IpUrIpResultId();
 		id.setUrNo(ipUrIpDetail.getUrNo());

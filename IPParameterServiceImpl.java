@@ -16,13 +16,13 @@ public class IPParameterServiceImpl implements IIPParameterService{
 
 	private IIPParameterDao ipParameterDao;
 	
-	public void setIpParameterDao(IIPParameterDao ipParameterDao) {
+	public void setIpParameterDao(IIPParameterDao ipParameterDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpParameterDao
 		this.ipParameterDao = ipParameterDao;
 	}
 
 
 	@Override
-	public IPParameter createIPParameter(IPParameter ipParameter)
+	public IPParameter createIPParameter(IPParameter ipParameter) // DMAP Comment : Dead Code Detected - The Following Method has no reference createIPParameter
 			throws IPFMBusinessException {
 		try {
 			if(ipParameter!=null){
@@ -54,7 +54,7 @@ public class IPParameterServiceImpl implements IIPParameterService{
 
 
 	@Override
-	public IPParameter getIPParameter(String parameterId)
+	public IPParameter getIPParameter(String parameterId) // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPParameter
 			throws IPFMBusinessException {
 		IPParameter ipParameter = null;
 		try {
@@ -107,7 +107,7 @@ public class IPParameterServiceImpl implements IIPParameterService{
 
 
 	@Override
-	public IPParameter updateIPParameter(IPParameter ipParameter)
+	public IPParameter updateIPParameter(IPParameter ipParameter) // DMAP Comment : Dead Code Detected - The Following Method has no reference updateIPParameter
 			throws IPFMBusinessException {
 		try {
 			if(ipParameter!=null){
@@ -121,7 +121,7 @@ public class IPParameterServiceImpl implements IIPParameterService{
 
 
 	@Override
-	public List<IPParameter> deleteAndReSearchIPParameter(String rowId,
+	public List<IPParameter> deleteAndReSearchIPParameter(String rowId, // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndReSearchIPParameter
 			String parameterGroup, String parameterSubGroup)
 			throws IPFMBusinessException {
 		List<IPParameter> ipParameterList = null;

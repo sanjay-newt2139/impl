@@ -30,40 +30,40 @@ public class PhyInterfaceServiceImpl implements PhyInterfaceService{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 	
-	public void setPhysicalInterfaceDao(IIPPhysicalInterfaceDao physicalInterfaceDao) {
+	public void setPhysicalInterfaceDao(IIPPhysicalInterfaceDao physicalInterfaceDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPhysicalInterfaceDao
 		this.physicalInterfaceDao = physicalInterfaceDao;
 	}
 
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return physicalInterfaceDao.getSubUrNo(urNo);
 	}
 	
 	
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
 	
 	@Override
-	public IpInfo getIPInfoWithUsedStatus(String ip) {
+	public IpInfo getIPInfoWithUsedStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoWithUsedStatus
 		String[] status = {"U"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
 	}
@@ -76,7 +76,7 @@ public class PhyInterfaceServiceImpl implements PhyInterfaceService{
 	
 	
 	@Override
-	public List<IpUrPhysicalInterface> findByUrNo(String urNo) {
+	public List<IpUrPhysicalInterface> findByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		return physicalInterfaceDao.findByURNo(urNo);
 	}
 
@@ -86,7 +86,7 @@ public class PhyInterfaceServiceImpl implements PhyInterfaceService{
 	}
 
 	@Override
-	public IpUrPhysicalInterface changeUrNo(IpUrPhysicalInterface tempUr,
+	public IpUrPhysicalInterface changeUrNo(IpUrPhysicalInterface tempUr, // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 			String urNO) {
 		IpUrPhysicalInterface newInterface = tempUr;
 		newInterface.getId().setUrNo(urNO);
@@ -115,7 +115,7 @@ public class PhyInterfaceServiceImpl implements PhyInterfaceService{
 	}
 
 	@Override
-	public IpUrPhysicalInterface findPhyInterface(String urNo, String subUrNo) {
+	public IpUrPhysicalInterface findPhyInterface(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findPhyInterface
 		IpUrPhysicalInterfaceId id = new IpUrPhysicalInterfaceId(urNo, subUrNo);
 		return physicalInterfaceDao.getID(id);
 	}
@@ -148,13 +148,13 @@ public class PhyInterfaceServiceImpl implements PhyInterfaceService{
 	}
 	
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		physicalInterfaceDao.commitSubURDelete(urNo,"A");
 		physicalInterfaceDao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		physicalInterfaceDao.commitSubURUpdate(urNo,"A");
 		List<IpUrPhysicalInterface> piList = physicalInterfaceDao.waitDeleteUr(urNo);
 		for(IpUrPhysicalInterface pi : piList){

@@ -25,15 +25,15 @@ public  class RangeIPServiceImpl implements RangeIPService{
 	private IIPRangeDao rangeIPDao;
 	private IIPGroupDao ipGroupDao;
 	
-	public void setRangeIPDao(IIPRangeDao rangeIPDao) {
+	public void setRangeIPDao(IIPRangeDao rangeIPDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRangeIPDao
 		this.rangeIPDao = rangeIPDao;
 	}
 
-	public void setIpGroupDao(IIPGroupDao ipGroupDao) {
+	public void setIpGroupDao(IIPGroupDao ipGroupDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpGroupDao
 		this.ipGroupDao = ipGroupDao;
 	}
 	
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
@@ -71,7 +71,7 @@ public  class RangeIPServiceImpl implements RangeIPService{
 	}
 	
 	@Override
-	public List<IPRange> deleteAndReSearchIPRange(String rowId, IPRange ipRange)throws IPFMBusinessException {
+	public List<IPRange> deleteAndReSearchIPRange(String rowId, IPRange ipRange)throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteAndReSearchIPRange
 		List<IPRange> ipRangeList = null;
 		IPRange ip = rangeIPDao.getByPrimaryKey(rowId);
 		if(ipRange!=null){
@@ -85,7 +85,7 @@ public  class RangeIPServiceImpl implements RangeIPService{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public HashMap initRangeIPSearch(String tier1TeamID) throws IPFMBusinessException {
+	public HashMap initRangeIPSearch(String tier1TeamID) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference initRangeIPSearch
 		HashMap result = new HashMap();
 		try {
 			result.put(IPFMConstant.LIST_IPVERSION  , rangeIPDao.getIPVersionListByTier1TeamID(tier1TeamID));
@@ -110,14 +110,14 @@ public  class RangeIPServiceImpl implements RangeIPService{
 		return resultList;
 	}
 
-	public List<Map> checkIPRange23_2(){
+	public List<Map> checkIPRange23_2(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRange23_2
 		//Map key
 		//1. result
 		//2. errorMsg
 		return null;
 	}
 	
-	public List<Map> checkIPRangeEdit(){
+	public List<Map> checkIPRangeEdit(){ // DMAP Comment : Dead Code Detected - The Following Method has no reference checkIPRangeEdit
 		//Map key
 		//1. result
 		//2. errorMsg

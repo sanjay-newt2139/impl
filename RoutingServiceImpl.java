@@ -32,37 +32,37 @@ public class RoutingServiceImpl implements RoutingService{
 	private IPUrActionDao ipUrActionDao;
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
-	public void setRoutingDao(IIPRoutingDao routingDao) {
+	public void setRoutingDao(IIPRoutingDao routingDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setRoutingDao
 		this.routingDao = routingDao;
 	}
 
 	@Override
-	public String genSubUrNo(String urNo) {
+	public String genSubUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference genSubUrNo
 		return routingDao.getSubUrNo(urNo);
 	}
 	
 	@Override
-	public IpInfo getIPInfo(String ip) {
+	public IpInfo getIPInfo(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfo
 		return ipInfoDao.findIpInfo(ip);
 	}
 	
 	@Override
-	public IpInfo getIPInfoUsedStatus(String ip) {
+	public IpInfo getIPInfoUsedStatus(String ip) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIPInfoUsedStatus
 		String[] status = {"U"};
 		return ipInfoDao.findIpInfoWithStatus(ip, status);
 	}
@@ -78,7 +78,7 @@ public class RoutingServiceImpl implements RoutingService{
 		}
 	}
 	@Override
-	public List<IpUrRouting> findByUrNo(String urNo) {
+	public List<IpUrRouting> findByUrNo(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findByUrNo
 		return routingDao.findByURNo(urNo);
 	}
 
@@ -87,7 +87,7 @@ public class RoutingServiceImpl implements RoutingService{
 		return routingDao.getProperty(refTable);
 	}
 	@Override
-	public IpUrRouting changeUrNo(IpUrRouting tempUr, String urNO) {
+	public IpUrRouting changeUrNo(IpUrRouting tempUr, String urNO) { // DMAP Comment : Dead Code Detected - The Following Method has no reference changeUrNo
 		IpUrRouting newRouting = tempUr;
 		newRouting.getId().setUrNo(urNO);
 		newRouting.setRowId(commonDao.getROW_ID());
@@ -114,7 +114,7 @@ public class RoutingServiceImpl implements RoutingService{
 	}
 	
 	@Override
-	public IpUrRouting findFirewall(String urNo, String subUrNo) {
+	public IpUrRouting findFirewall(String urNo, String subUrNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference findFirewall
 		IpUrRoutingId id = new IpUrRoutingId(urNo, subUrNo);
 		return routingDao.getID(id);
 	}
@@ -129,13 +129,13 @@ public class RoutingServiceImpl implements RoutingService{
 	}
 	
 	@Override
-	public void cleanSubUR(String urNo) {
+	public void cleanSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference cleanSubUR
 		routingDao.commitSubURDelete(urNo,"A");
 		routingDao.commitSubURUpdate(urNo, "D");
 	}
 
 	@Override
-	public void commitSubUR(String urNo) {
+	public void commitSubUR(String urNo) { // DMAP Comment : Dead Code Detected - The Following Method has no reference commitSubUR
 		routingDao.commitSubURUpdate(urNo,"A");
 		List<IpUrRouting> rtList = routingDao.waitDeleteUr(urNo);
 		for(IpUrRouting rt : rtList){

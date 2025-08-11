@@ -19,11 +19,11 @@ public class IPGroupServiceImpl implements IIPGroupService {
 	private IIPGroupDao ipGroupDao;
 	private CommonDao commonDao;
 	
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
-	public void setIpGroupDao(IIPGroupDao ipGroupDao) {
+	public void setIpGroupDao(IIPGroupDao ipGroupDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpGroupDao
 		this.ipGroupDao = ipGroupDao;
 	}
 
@@ -69,7 +69,7 @@ public class IPGroupServiceImpl implements IIPGroupService {
 	}*/
 
 	@Override
-	public IPGroup addIPGroup(IPGroup obj) throws  Exception {
+	public IPGroup addIPGroup(IPGroup obj) throws  Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference addIPGroup
 		IPGroup result = new IPGroup();
 		try {
 			if(obj != null){
@@ -90,7 +90,7 @@ public class IPGroupServiceImpl implements IIPGroupService {
 	}
 
 	@Override
-	public IPGroup editIPGroup(IPGroup obj)
+	public IPGroup editIPGroup(IPGroup obj) // DMAP Comment : Dead Code Detected - The Following Method has no reference editIPGroup
 			throws Exception {
 		IPGroup result = null;
 		try {
@@ -105,7 +105,7 @@ public class IPGroupServiceImpl implements IIPGroupService {
 		return result;
 	}
 	@Override
-	public IPGroup deleteIPGroup(IPGroup obj)
+	public IPGroup deleteIPGroup(IPGroup obj) // DMAP Comment : Dead Code Detected - The Following Method has no reference deleteIPGroup
 			throws IPFMBusinessException {
 		try {
 			if(obj != null){
@@ -118,7 +118,7 @@ public class IPGroupServiceImpl implements IIPGroupService {
 	}
 	@SuppressWarnings("unchecked")
 	@Override
-	public HashMap initGroupIPSearch(String tier1TeamID) throws IPFMBusinessException {
+	public HashMap initGroupIPSearch(String tier1TeamID) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference initGroupIPSearch
 		HashMap result = new HashMap();
 		try {
 			result.put(IPFMConstant.LIST_IPCLASS, commonDao.getMasterList(IPFMConstant.MCODE_IPCLASS));

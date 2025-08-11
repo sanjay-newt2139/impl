@@ -37,69 +37,69 @@ public class UserProfileServiceImp implements UserProfileService {
     private CommonDao commonDao;
     private AuthenDBService authService;
     
-	public AuthenDBService getAuthService() {
+	public AuthenDBService getAuthService() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getAuthService
 		return authService;
 	}
 
-	public EmployeeProfileService2 getEhrService2() {
+	public EmployeeProfileService2 getEhrService2() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEhrService2
 		return ehrService2;
 	}
 
 	private EmployeeProfileService2 ehrService2;
 	
-	public void setAuthService(AuthenDBService authService) {
+	public void setAuthService(AuthenDBService authService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setAuthService
 		this.authService = authService;
 	}
 	
-	public void setEhrService2(EmployeeProfileService2 ehrService2) {
+	public void setEhrService2(EmployeeProfileService2 ehrService2) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEhrService2
 		this.ehrService2 = ehrService2;
 	}
 	
-	public IIPUserDao getIpUserDao() {
+	public IIPUserDao getIpUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserDao
 		return ipUserDao;
 	}
 
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 	
-	public IPRoleDao getIpRoleDao() {
+	public IPRoleDao getIpRoleDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpRoleDao
 		return ipRoleDao;
 	}
 
-	public void setIpRoleDao(IPRoleDao ipRoleDao) {
+	public void setIpRoleDao(IPRoleDao ipRoleDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRoleDao
 		this.ipRoleDao = ipRoleDao;
 	}
 	
-	public IPRoleMemberDao getIpRoleMemberDao() {
+	public IPRoleMemberDao getIpRoleMemberDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpRoleMemberDao
 		return ipRoleMemberDao;
 	}
 
-	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) {
+	public void setIpRoleMemberDao(IPRoleMemberDao ipRoleMemberDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpRoleMemberDao
 		this.ipRoleMemberDao = ipRoleMemberDao;
 	}
 
-	public IPDelegateUserDao getIpDelegateUserDao() {
+	public IPDelegateUserDao getIpDelegateUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpDelegateUserDao
 		return ipDelegateUserDao;
 	}
 
-	public void setIpDelegateUserDao(IPDelegateUserDao ipDelegateUserDao) {
+	public void setIpDelegateUserDao(IPDelegateUserDao ipDelegateUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpDelegateUserDao
 		this.ipDelegateUserDao = ipDelegateUserDao;
 	}
 	
-	public CommonDao getCommonDao() {
+	public CommonDao getCommonDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCommonDao
 		return commonDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 	
-	public EmployeeProfileService getEhrService() {
+	public EmployeeProfileService getEhrService() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEhrService
 		return ehrService;
 	}
 
-	public void setEhrService(EmployeeProfileService ehrService) {
+	public void setEhrService(EmployeeProfileService ehrService) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setEhrService
 		this.ehrService = ehrService;
 	}
 
@@ -220,7 +220,7 @@ public class UserProfileServiceImp implements UserProfileService {
 	}
 
 	@Override
-	public IpUser getEhrByUserId(String userId) throws IPFMBusinessException {
+	public IpUser getEhrByUserId(String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getEhrByUserId
 		EmployeeProfileOM profile=null;
 		ApproverOM approver=null;
 		IpUser ipUser=new IpUser();
@@ -282,7 +282,7 @@ public class UserProfileServiceImp implements UserProfileService {
 	}
 
 	@Override
-	public List<IpDelegateUser>  addDelegate(IpDelegateUser ipDelegateUser, IpUser ipUser) throws IPFMBusinessException {
+	public List<IpDelegateUser>  addDelegate(IpDelegateUser ipDelegateUser, IpUser ipUser) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addDelegate
 		List<IpDelegateUser> delegateDataList = null;
 		try {
 			String result = ipDelegateUserDao.getCheckExistingData(ipDelegateUser,ipUser);
@@ -321,7 +321,7 @@ public class UserProfileServiceImp implements UserProfileService {
 	}
 
 	@Override
-	public List<IpRoleMember>  addRole(IpRoleMember ipRoleMember) throws IPFMBusinessException {
+	public List<IpRoleMember>  addRole(IpRoleMember ipRoleMember) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference addRole
 		List<IpRoleMember> delegateDataList = null;
 		try {
 			String result = ipRoleMemberDao.getCheckExistingDataRole(ipRoleMember);
@@ -511,7 +511,7 @@ public class UserProfileServiceImp implements UserProfileService {
 	}
 
 	@Override
-	public List<IpRoleMember> findIpRoleMemberByUserId(String userId) throws IPFMBusinessException {
+	public List<IpRoleMember> findIpRoleMemberByUserId(String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpRoleMemberByUserId
 		List<IpRoleMember> resultList = new ArrayList<IpRoleMember>();
 		try {
 			resultList = ipRoleMemberDao.findIpRoleMembersByUserId(userId);

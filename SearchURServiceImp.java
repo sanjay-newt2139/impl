@@ -28,35 +28,35 @@ public class SearchURServiceImp implements SearchURService {
 	private IPUserDao iipUserDao;
 	
 	
-	public IPUrStatusDao getIpUrStatusDao() {
+	public IPUrStatusDao getIpUrStatusDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrStatusDao
 		return ipUrStatusDao;
 	}
 
-	public void setIpUrStatusDao(IPUrStatusDao ipUrStatusDao) {
+	public void setIpUrStatusDao(IPUrStatusDao ipUrStatusDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrStatusDao
 		this.ipUrStatusDao = ipUrStatusDao;
 	}
 
-	public IPUrIPDetailDao getIpUrIPDetailDao() {
+	public IPUrIPDetailDao getIpUrIPDetailDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIPDetailDao
 		return ipUrIPDetailDao;
 	}
 
-	public void setIpUrIPDetailDao(IPUrIPDetailDao ipUrIPDetailDao) {
+	public void setIpUrIPDetailDao(IPUrIPDetailDao ipUrIPDetailDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPDetailDao
 		this.ipUrIPDetailDao = ipUrIPDetailDao;
 	}
 
-	public IIPUserDao getIpUserDao() {
+	public IIPUserDao getIpUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserDao
 		return ipUserDao;
 	}
 
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 	
-	public IPUserDao getIipUserDao() {
+	public IPUserDao getIipUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIipUserDao
 		return iipUserDao;
 	}
 
-	public void setIipUserDao(IPUserDao iipUserDao) {
+	public void setIipUserDao(IPUserDao iipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIipUserDao
 		this.iipUserDao = iipUserDao;
 	}
 	

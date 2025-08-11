@@ -9,11 +9,11 @@ import th.co.ais.ipfm.service.SendIPExpireWarningService;
 
 public class SendIPExpireWarningServiceImpl implements SendIPExpireWarningService{
 	private IAutoSendMailDao iAutoSendMailDao;
-	public IAutoSendMailDao getiAutoSendMailDao() {
+	public IAutoSendMailDao getiAutoSendMailDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getiAutoSendMailDao
 		return iAutoSendMailDao;
 	}
 
-	public void setiAutoSendMailDao(IAutoSendMailDao iAutoSendMailDao) {
+	public void setiAutoSendMailDao(IAutoSendMailDao iAutoSendMailDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setiAutoSendMailDao
 		this.iAutoSendMailDao = iAutoSendMailDao;
 	}
 

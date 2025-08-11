@@ -21,33 +21,33 @@ public class HistoryNwConfigServiceImp implements HistoryNwConfigService {
 	private IPUrActionHistoryDao ipUrActionHistoryDao;
 
 
-	public IPUrActionDao getIpUrActionDao() {
+	public IPUrActionDao getIpUrActionDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionDao
 		return ipUrActionDao;
 	}
 
-	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) {
+	public void setIpUrActionDao(IPUrActionDao ipUrActionDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionDao
 		this.ipUrActionDao = ipUrActionDao;
 	}
 
-	public IPUrNwConfigDao getIpUrNwConfigDao() {
+	public IPUrNwConfigDao getIpUrNwConfigDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrNwConfigDao
 		return ipUrNwConfigDao;
 	}
 
-	public void setIpUrNwConfigDao(IPUrNwConfigDao ipUrNwConfigDao) {
+	public void setIpUrNwConfigDao(IPUrNwConfigDao ipUrNwConfigDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrNwConfigDao
 		this.ipUrNwConfigDao = ipUrNwConfigDao;
 	}
 
 
-	public IPUrActionHistoryDao getIpUrActionHistoryDao() {
+	public IPUrActionHistoryDao getIpUrActionHistoryDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionHistoryDao
 		return ipUrActionHistoryDao;
 	}
 
-	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) {
+	public void setIpUrActionHistoryDao(IPUrActionHistoryDao ipUrActionHistoryDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrActionHistoryDao
 		this.ipUrActionHistoryDao = ipUrActionHistoryDao;
 	}
 
 	@Override
-	public List<IpUrAction> getIpUrActionList(String urNo) throws IPFMBusinessException {
+	public List<IpUrAction> getIpUrActionList(String urNo) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrActionList
 		List<IpUrAction> ipUrActionList = null;
 		ipUrActionList  = ipUrActionDao.getURActionList(urNo);
 		return ipUrActionList;

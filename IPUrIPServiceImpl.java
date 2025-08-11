@@ -21,7 +21,7 @@ public class IPUrIPServiceImpl implements IIPUrIPService {
 	DateFormat dfm = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss",new Locale("en","EN"));
 	
 	@Override
-	public String addIPUrIP(IPUrIP obj) throws IPFMBusinessException,Exception {
+	public String addIPUrIP(IPUrIP obj) throws IPFMBusinessException,Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference addIPUrIP
 		try {
 			if(obj != null){
 								
@@ -36,7 +36,7 @@ public class IPUrIPServiceImpl implements IIPUrIPService {
 	}
 	
 	@Override
-	public IPUrIP editIPUrIP(IPUrIP obj) throws IPFMBusinessException,Exception {
+	public IPUrIP editIPUrIP(IPUrIP obj) throws IPFMBusinessException,Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference editIPUrIP
 		//IPUrIP result = new IPUrIP();
 		try {
 			if(obj != null){					
@@ -51,7 +51,7 @@ public class IPUrIPServiceImpl implements IIPUrIPService {
 	}
 	
 	@Override
-	public IPUrIP findIPUrIPByUrNo(String urNo) throws IPFMBusinessException,Exception {
+	public IPUrIP findIPUrIPByUrNo(String urNo) throws IPFMBusinessException,Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIPUrIPByUrNo
 		IPUrIP result = new IPUrIP();
 		try {
 			//if(!Utils.ifBlank(urNo,"").trim().equalIgnoreCase("")){					
@@ -64,16 +64,16 @@ public class IPUrIPServiceImpl implements IIPUrIPService {
 		return result;
 	}
 	
-	public IIPUrIPDao getIpUrIPDao() {
+	public IIPUrIPDao getIpUrIPDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrIPDao
 		return ipUrIPDao;
 	}
-	public void setIpUrIPDao(IIPUrIPDao ipUrIPDao) {
+	public void setIpUrIPDao(IIPUrIPDao ipUrIPDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrIPDao
 		this.ipUrIPDao = ipUrIPDao;
 	}
-	public CommonDao getCommonDao() {
+	public CommonDao getCommonDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCommonDao
 		return commonDao;
 	}
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 

@@ -27,27 +27,27 @@ public class WorkFlowServiceImp implements WorkFlowService {
 	 private CommonDao commonDao;
 
 
-	public IPUrWfConfigDetailDao getIpUrWfConfigDetailDao() {
+	public IPUrWfConfigDetailDao getIpUrWfConfigDetailDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUrWfConfigDetailDao
 		return ipUrWfConfigDetailDao;
 	}
 
-	public void setIpUrWfConfigDetailDao(IPUrWfConfigDetailDao ipUrWfConfigDetailDao) {
+	public void setIpUrWfConfigDetailDao(IPUrWfConfigDetailDao ipUrWfConfigDetailDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUrWfConfigDetailDao
 		this.ipUrWfConfigDetailDao = ipUrWfConfigDetailDao;
 	}
 
-	public IPWfConfigDao getIpWfConfigDao() {
+	public IPWfConfigDao getIpWfConfigDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpWfConfigDao
 		return ipWfConfigDao;
 	}
 
-	public void setIpWfConfigDao(IPWfConfigDao ipWfConfigDao) {
+	public void setIpWfConfigDao(IPWfConfigDao ipWfConfigDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpWfConfigDao
 		this.ipWfConfigDao = ipWfConfigDao;
 	}
 	
-	public CommonDao getCommonDao() {
+	public CommonDao getCommonDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getCommonDao
 		return commonDao;
 	}
 
-	public void setCommonDao(CommonDao commonDao) {
+	public void setCommonDao(CommonDao commonDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setCommonDao
 		this.commonDao = commonDao;
 	}
 
@@ -82,7 +82,7 @@ public class WorkFlowServiceImp implements WorkFlowService {
 	}
 	
 	@Override
-	public void save(IpWfConfig ipWfConfig, List<IpWfConfigDetail> ipWfConfigDetailList,String userId) throws IPFMBusinessException {
+	public void save(IpWfConfig ipWfConfig, List<IpWfConfigDetail> ipWfConfigDetailList,String userId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference save
 		try {			
 			if("NC".equals(ipWfConfig.getUrType())){
 				ipWfConfigDao.updateIpWfConfig(ipWfConfig,userId); 

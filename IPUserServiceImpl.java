@@ -1,3 +1,4 @@
+ /* This application remediation was done for embedded Oracle SQL to make it compatible with PostgreSQL with Newt DMAP Version: v1.1.4.3_v8.3.5.2 on Date: 05-Aug-2025 */
 package th.co.ais.ipfm.service.impl;
 
 import java.util.ArrayList;
@@ -23,20 +24,26 @@ public  class IPUserServiceImpl implements IPUserService{
 
 	private IIPUserDao ipUserDao;
 
-	public IIPUserDao getIpUserDao() {
+	public IIPUserDao getIpUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserDao
 		return ipUserDao;
 	}
 
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 	
-	public ArrayList<TreeMenu> getToDoListByUser(String userName) {
+	public ArrayList<TreeMenu> getToDoListByUser(String userName) { // DMAP Comment : Dead Code Detected - The Following Method has no reference getToDoListByUser
 		// TODO Auto-generated method stub
 		ArrayList<TreeMenu> returnResult = new ArrayList<TreeMenu>();
 		ArrayList params = new ArrayList();
 		params.add(userName); 
-		List<Map> result = ipUserDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
+/**
+DMAP TAG: Query converted: Identifier1
+DMAP ConvertedQuery - call LIST_TODO_LIST (?,?)
+**/
+
+//		List<Map> result = ipUserDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
+		List<Map> result = ipUserDao.callStore("call LIST_TODO_LIST (?,?)", params);
 		//List<Map> result = ipfmCommondDao.callStore("{call LIST_TODO_LIST (?,?)}", params);
 		
 		for(Map map : result){ 
@@ -68,7 +75,7 @@ public  class IPUserServiceImpl implements IPUserService{
 	}
 
 	@Override
-	public IpUser findIpUserById(String userId) throws Exception {
+	public IpUser findIpUserById(String userId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpUserById
 		IpUser result = null;
 		try {
 			System.out.println("in Service Method .........");
@@ -88,7 +95,7 @@ public  class IPUserServiceImpl implements IPUserService{
 	}
 	
 	@Override
-	public List<IpUser> getIpUserListByTeam(String teamId) throws Exception {
+	public List<IpUser> getIpUserListByTeam(String teamId) throws Exception { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserListByTeam
 		List<IpUser> result = null;
 		try {
 			result = ipUserDao.getTeamMemberList(teamId);
@@ -140,7 +147,7 @@ public  class IPUserServiceImpl implements IPUserService{
 	}
 
 	@Override
-	public IpUser saveIpUser(IpUser ipUser) throws IPFMBusinessException {
+	public IpUser saveIpUser(IpUser ipUser) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference saveIpUser
 		try {
 			  ipUserDao.insert(ipUser);
 		} catch (DataAccessException e) {
@@ -154,7 +161,7 @@ public  class IPUserServiceImpl implements IPUserService{
 	}
 
 	@Override
-	public List<IpUser> findUserByRoleId(String roleId) throws IPFMBusinessException {
+	public List<IpUser> findUserByRoleId(String roleId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findUserByRoleId
 		// TODO Auto-generated method stub
 		try {
 			return ipUserDao.getRoleIdList(roleId);
@@ -166,7 +173,7 @@ public  class IPUserServiceImpl implements IPUserService{
 	}
 	
 	@Override
-	public List<IpRoleMember> findUserByIpRoleMember(String roleId) throws IPFMBusinessException {
+	public List<IpRoleMember> findUserByIpRoleMember(String roleId) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference findUserByIpRoleMember
 		// TODO Auto-generated method stub
 		try {
 			return ipUserDao.getIpRoleMember(roleId);

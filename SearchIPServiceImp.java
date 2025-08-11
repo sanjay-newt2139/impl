@@ -29,35 +29,35 @@ public class SearchIPServiceImp implements SearchIPService {
 	private PlanningPLDao planningPLDao;
 	
 	
-	public IIPInfoDAO getIpInfoDao() {
+	public IIPInfoDAO getIpInfoDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpInfoDao
 		return ipInfoDao;
 	}
 
-	public void setIpInfoDao(IIPInfoDAO ipInfoDao) {
+	public void setIpInfoDao(IIPInfoDAO ipInfoDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpInfoDao
 		this.ipInfoDao = ipInfoDao;
 	}
 
-	public PlanningPLDao getPlanningPLDao() {
+	public PlanningPLDao getPlanningPLDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getPlanningPLDao
 		return planningPLDao;
 	}
 
-	public void setPlanningPLDao(PlanningPLDao planningPLDao) {
+	public void setPlanningPLDao(PlanningPLDao planningPLDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setPlanningPLDao
 		this.planningPLDao = planningPLDao;
 	}
 
-	public IIPUserDao getIpUserDao() {
+	public IIPUserDao getIpUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIpUserDao
 		return ipUserDao;
 	}
 
-	public void setIpUserDao(IIPUserDao ipUserDao) {
+	public void setIpUserDao(IIPUserDao ipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIpUserDao
 		this.ipUserDao = ipUserDao;
 	}
 	
-	public IPUserDao getIipUserDao() {
+	public IPUserDao getIipUserDao() { // DMAP Comment : Dead Code Detected - The Following Method has no reference getIipUserDao
 		return iipUserDao;
 	}
 
-	public void setIipUserDao(IPUserDao iipUserDao) {
+	public void setIipUserDao(IPUserDao iipUserDao) { // DMAP Comment : Dead Code Detected - The Following Method has no reference setIipUserDao
 		this.iipUserDao = iipUserDao;
 	}
 
@@ -120,7 +120,7 @@ public class SearchIPServiceImp implements SearchIPService {
 	}
 
 	@Override
-	public Integer getSeachIPTotalRec(IpInfo ipInfo, IpUser ipUser) throws IPFMBusinessException {
+	public Integer getSeachIPTotalRec(IpInfo ipInfo, IpUser ipUser) throws IPFMBusinessException { // DMAP Comment : Dead Code Detected - The Following Method has no reference getSeachIPTotalRec
 		Integer totalRec = 0;
 		try {
 			totalRec = ipInfoDao.searchIPTotalRec(ipInfo, ipUser);
@@ -140,7 +140,7 @@ public class SearchIPServiceImp implements SearchIPService {
 	}
 
 	@Override
-	public IpInfo findIpInfoByWYNodeName(String wyNodeName)
+	public IpInfo findIpInfoByWYNodeName(String wyNodeName) // DMAP Comment : Dead Code Detected - The Following Method has no reference findIpInfoByWYNodeName
 			throws IPFMBusinessException {
 		// TODO Auto-generated method stub
 		return ipInfoDao.findIpInfoByWCHUNodeName(wyNodeName);
